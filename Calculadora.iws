@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acab65e4-5340-4701-8709-a16cb7ffb255" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Calculadora.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Calculadora.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceCode.Calculadora.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceCode.Calculadora.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Calculadora.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/Calculadora.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Calculadora.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Calculadora.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/suma/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/suma/build.gradle" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,6 +79,9 @@
         <task path="$PROJECT_DIR$/suma">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/evaluador">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -87,20 +92,41 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Calculadora" type="f1a62948:ProjectNode" />
-                <item name="suma" type="2d1252cf:ModuleNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Calculadora" type="f1a62948:ProjectNode" />
-                <item name="suma" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Calculadora" type="f1a62948:ProjectNode" />
-                <item name="suma" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Calculadora" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Calculadora" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Calculadora" type="f1a62948:ProjectNode" />
+                <item name="suma" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Calculadora" type="f1a62948:ProjectNode" />
+                <item name="suma" type="2d1252cf:ModuleNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
               </path>
             </expand>
             <select />
@@ -147,6 +173,7 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -156,6 +183,9 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
     <property name="show.run.dashboard.notification" value="false" />
   </component>
@@ -171,7 +201,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.Calculadora:discovery [build]">
+  <component name="RunManager" selected="Gradle.Calculadora [jacocoTestReport]">
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
@@ -189,25 +219,6 @@
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="Calculadora [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
     </configuration>
     <configuration name="Calculadora [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -228,10 +239,10 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="Calculadora:discovery [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Calculadora [jacocoRootReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/discovery" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -239,7 +250,64 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="build" />
+            <option value="jacocoRootReport" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Calculadora [jacocoTestReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jacocoTestReport" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Calculadora [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Calculadora:suma [jacocoTestReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/suma" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jacocoTestReport" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -294,18 +362,22 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.Calculadora [build]" />
-      <item itemvalue="Gradle.Calculadora [clean]" />
       <item itemvalue="Spring Boot.SumaService" />
       <item itemvalue="Spring Boot.Discovery" />
       <item itemvalue="Spring Boot.EvaluadorApplication" />
-      <item itemvalue="Gradle.Calculadora:discovery [build]" />
+      <item itemvalue="Gradle.Calculadora [jacocoTestReport]" />
+      <item itemvalue="Gradle.Calculadora:suma [jacocoTestReport]" />
+      <item itemvalue="Gradle.Calculadora [jacocoRootReport]" />
+      <item itemvalue="Gradle.Calculadora [clean]" />
+      <item itemvalue="Gradle.Calculadora [test]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Calculadora:discovery [build]" />
+        <item itemvalue="Gradle.Calculadora [test]" />
         <item itemvalue="Gradle.Calculadora [clean]" />
-        <item itemvalue="Gradle.Calculadora [build]" />
+        <item itemvalue="Gradle.Calculadora [jacocoRootReport]" />
+        <item itemvalue="Gradle.Calculadora:suma [jacocoTestReport]" />
+        <item itemvalue="Gradle.Calculadora [jacocoTestReport]" />
       </list>
     </recent_temporary>
   </component>
@@ -322,7 +394,7 @@
       <workItem from="1569252364086" duration="1465000" />
       <workItem from="1569420234121" duration="132000" />
       <workItem from="1569420388046" duration="11989000" />
-      <workItem from="1569433911589" duration="1169000" />
+      <workItem from="1569433911589" duration="9636000" />
     </task>
     <task id="LOCAL-00001" summary="Primera Subida">
       <created>1569253266236</created>
@@ -352,7 +424,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569430781015</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Tarea de compilacion agregada al jenkinfile">
+      <created>1569435204266</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1569435204266</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,7 +457,8 @@
     <MESSAGE value="Service discovery instaldo y configurado" />
     <MESSAGE value="Ciente de servicio configurado" />
     <MESSAGE value="Configuracion de Jenkins iniciada" />
-    <option name="LAST_COMMIT_MESSAGE" value="Configuracion de Jenkins iniciada" />
+    <MESSAGE value="Tarea de compilacion agregada al jenkinfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tarea de compilacion agregada al jenkinfile" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
 </project>

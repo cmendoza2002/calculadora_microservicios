@@ -21,9 +21,15 @@
       <module name="Calculadora.discovery.test" target="1.8" />
       <module name="Calculadora.evaluador.main" target="1.8" />
       <module name="Calculadora.evaluador.test" target="1.8" />
+      <module name="Calculadora.main" target="1.8" />
+      <module name="calculadora.main" target="1.8" />
       <module name="Calculadora.suma.main" target="1.8" />
       <module name="Calculadora.suma.test" target="1.8" />
+      <module name="calculadora.test" target="1.8" />
+      <module name="Calculadora.test" target="1.8" />
       <module name="discovery" target="1.8" />
+      <module name="SourceCode.Calculadora.main" target="1.8" />
+      <module name="SourceCode.Calculadora.test" target="1.8" />
       <module name="suma" target="1.8" />
       <module name="suma.main" target="1.8" />
       <module name="suma.test" target="1.8" />
@@ -51,16 +57,6 @@
           </set>
         </option>
         <option name="useAutoImport" value="true" />
-        <option name="useQualifiedModuleNames" value="true" />
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/suma" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/suma" />
-          </set>
-        </option>
         <option name="useQualifiedModuleNames" value="true" />
       </GradleProjectSettings>
     </option>
@@ -96,13 +92,14 @@
       <module fileurl="file://$PROJECT_DIR$/evaluador/Calculadora.evaluador.iml" filepath="$PROJECT_DIR$/evaluador/Calculadora.evaluador.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluador/Calculadora.evaluador.main.iml" filepath="$PROJECT_DIR$/evaluador/Calculadora.evaluador.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluador/Calculadora.evaluador.test.iml" filepath="$PROJECT_DIR$/evaluador/Calculadora.evaluador.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Calculadora.main.iml" filepath="$PROJECT_DIR$/Calculadora.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/suma/Calculadora.suma.iml" filepath="$PROJECT_DIR$/suma/Calculadora.suma.iml" />
       <module fileurl="file://$PROJECT_DIR$/suma/Calculadora.suma.main.iml" filepath="$PROJECT_DIR$/suma/Calculadora.suma.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/suma/Calculadora.suma.test.iml" filepath="$PROJECT_DIR$/suma/Calculadora.suma.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Calculadora.test.iml" filepath="$PROJECT_DIR$/Calculadora.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SourceCode.Calculadora.main.iml" filepath="$PROJECT_DIR$/SourceCode.Calculadora.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SourceCode.Calculadora.test.iml" filepath="$PROJECT_DIR$/SourceCode.Calculadora.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/discovery/discovery.iml" filepath="$PROJECT_DIR$/discovery/discovery.iml" />
-      <module fileurl="file://$PROJECT_DIR$/suma/suma.iml" filepath="$PROJECT_DIR$/suma/suma.iml" />
-      <module fileurl="file://$PROJECT_DIR$/suma/suma.main.iml" filepath="$PROJECT_DIR$/suma/suma.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/suma/suma.test.iml" filepath="$PROJECT_DIR$/suma/suma.test.iml" />
     </modules>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
