@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acab65e4-5340-4701-8709-a16cb7ffb255" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/discovery/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/discovery/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/discovery/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/discovery/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/discovery/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/discovery/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/discovery/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/discovery/src/main/java/com/maint/calc/discovery/DiscoveryApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/discovery/src/test/java/com/maint/calc/discovery/DiscoveryApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/EvaluadorController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/evaluador/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculadora.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/Calculadora.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Calculadora.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Calculadora.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluador/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/discovery/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/EvaluadorApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/EvaluadorApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluador/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/evaluador/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,17 +72,6 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Calculadora" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Calculadora" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Calculadora" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -165,7 +141,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Discovery">
+  <component name="RunManager" selected="Spring Boot.EvaluadorApplication">
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
@@ -285,7 +261,7 @@
       <updated>1569252363466</updated>
       <workItem from="1569252364086" duration="1465000" />
       <workItem from="1569420234121" duration="132000" />
-      <workItem from="1569420388046" duration="6139000" />
+      <workItem from="1569420388046" duration="6549000" />
     </task>
     <task id="LOCAL-00001" summary="Primera Subida">
       <created>1569253266236</created>
@@ -294,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569253266236</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Service discovery instaldo y configurado">
+      <created>1569426575027</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1569426575027</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,7 +300,8 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Primera Subida" />
-    <option name="LAST_COMMIT_MESSAGE" value="Primera Subida" />
+    <MESSAGE value="Service discovery instaldo y configurado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Service discovery instaldo y configurado" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
 </project>
