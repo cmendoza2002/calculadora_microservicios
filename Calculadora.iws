@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acab65e4-5340-4701-8709-a16cb7ffb255" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Calculadora.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculadora.test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SourceCode.Calculadora.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SourceCode.Calculadora.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculadora.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/Calculadora.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Calculadora.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Calculadora.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/suma/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/suma/build.gradle" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -394,7 +386,7 @@
       <workItem from="1569252364086" duration="1465000" />
       <workItem from="1569420234121" duration="132000" />
       <workItem from="1569420388046" duration="11989000" />
-      <workItem from="1569433911589" duration="9636000" />
+      <workItem from="1569433911589" duration="11032000" />
     </task>
     <task id="LOCAL-00001" summary="Primera Subida">
       <created>1569253266236</created>
@@ -431,7 +423,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569435204266</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Cobertura de codigo">
+      <created>1569445847600</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1569445847600</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -458,7 +457,8 @@
     <MESSAGE value="Ciente de servicio configurado" />
     <MESSAGE value="Configuracion de Jenkins iniciada" />
     <MESSAGE value="Tarea de compilacion agregada al jenkinfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tarea de compilacion agregada al jenkinfile" />
+    <MESSAGE value="Cobertura de codigo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cobertura de codigo" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
 </project>
