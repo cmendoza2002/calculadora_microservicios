@@ -5,7 +5,7 @@ server:
   port: ${PORT:8081}
 eureka:
   instance:
-    status-page-url-path: /evaluar?expresion=2+2
+    status-page-url-path: /swagger-ui.html
   client:
     serviceUrl:
       defaultZone: ${EUREKA_URL:http://localhost:8761/eureka/}
