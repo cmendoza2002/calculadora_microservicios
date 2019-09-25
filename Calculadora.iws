@@ -2,20 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acab65e4-5340-4701-8709-a16cb7ffb255" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/suma/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/suma/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/suma/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/suma/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/suma/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/suma/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/suma/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/suma/src/main/java/com/maint/calc/suma/SumaApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/suma/src/main/java/com/maint/calc/suma/SumaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/suma/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/suma/src/test/java/com/maint/calc/suma/SumaApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Calculadora.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/Calculadora.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Calculadora.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Calculadora.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,6 +74,9 @@
         <task path="$PROJECT_DIR$/discovery">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/suma">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -90,11 +87,18 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Calculadora" type="f1a62948:ProjectNode" />
+                <item name="suma" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Calculadora" type="f1a62948:ProjectNode" />
+                <item name="suma" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Calculadora" type="f1a62948:ProjectNode" />
+                <item name="suma" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
               </path>
@@ -152,6 +156,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
     <property name="show.run.dashboard.notification" value="false" />
   </component>
   <component name="RunDashboard">
@@ -166,7 +171,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SumaService">
+  <component name="RunManager" selected="Gradle.Calculadora:discovery [build]">
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
@@ -216,6 +221,25 @@
         <option name="taskNames">
           <list>
             <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Calculadora:discovery [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/discovery" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -275,9 +299,11 @@
       <item itemvalue="Spring Boot.SumaService" />
       <item itemvalue="Spring Boot.Discovery" />
       <item itemvalue="Spring Boot.EvaluadorApplication" />
+      <item itemvalue="Gradle.Calculadora:discovery [build]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Calculadora:discovery [build]" />
         <item itemvalue="Gradle.Calculadora [clean]" />
         <item itemvalue="Gradle.Calculadora [build]" />
       </list>
@@ -295,7 +321,8 @@
       <updated>1569252363466</updated>
       <workItem from="1569252364086" duration="1465000" />
       <workItem from="1569420234121" duration="132000" />
-      <workItem from="1569420388046" duration="10358000" />
+      <workItem from="1569420388046" duration="11989000" />
+      <workItem from="1569433911589" duration="1169000" />
     </task>
     <task id="LOCAL-00001" summary="Primera Subida">
       <created>1569253266236</created>
@@ -318,7 +345,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569427211327</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Configuracion de Jenkins iniciada">
+      <created>1569430781015</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1569430781015</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -343,7 +377,8 @@
     <MESSAGE value="Primera Subida" />
     <MESSAGE value="Service discovery instaldo y configurado" />
     <MESSAGE value="Ciente de servicio configurado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ciente de servicio configurado" />
+    <MESSAGE value="Configuracion de Jenkins iniciada" />
+    <option name="LAST_COMMIT_MESSAGE" value="Configuracion de Jenkins iniciada" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
 </project>
