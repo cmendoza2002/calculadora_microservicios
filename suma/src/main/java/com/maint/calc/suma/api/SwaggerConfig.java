@@ -1,4 +1,4 @@
-package com.maint.calc.evaluador.rest;
+package com.maint.calc.suma.api;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,7 +19,7 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
     public Docket productApi() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.maint.calc.evaluador"))
+                .apis(RequestHandlerSelectors.basePackage("com.maint.calc.suma"))
                 .build()
                 .apiInfo(metaData());
     }
@@ -30,7 +30,7 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
                 .version("1.0.0")
                 .license("Apache License Version 2.0")
                 .licenseUrl("https://www.apache.org/licenses/LICENSE-2.0\"")
-                .contact(new Contact("cclozano", "https://cclozano.com", "cclozano@gmail.com"))
+                .contact(new Contact("maint", "https://maint.com.ec", "clozano@maint.com.ec"))
                 .build();
     }
     @Override

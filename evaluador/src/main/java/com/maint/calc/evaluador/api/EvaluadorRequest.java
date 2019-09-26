@@ -1,4 +1,4 @@
-package com.maint.calc.evaluador.rest;
+package com.maint.calc.evaluador.api;
 
 import lombok.Getter;
 import lombok.Setter;

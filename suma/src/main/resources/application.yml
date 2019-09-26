@@ -4,6 +4,8 @@ spring:
 server:
   port: ${PORT:8082}
 eureka:
+  instance:
+    status-page-url-path: /swagger-ui.html
   client:
     serviceUrl:
       defaultZone: ${EUREKA_URL:http://localhost:8761/eureka/}
