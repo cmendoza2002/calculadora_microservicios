@@ -1,6 +1,8 @@
 package com.maint.calc.evaluador;
 
 import com.maint.calc.evaluador.api.EvaluadorRequest;
+import com.maint.calc.evaluador.api.EvaluadorResponse;
+import com.maint.calc.evaluador.util.Validador;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,11 +17,11 @@ public class EvaluadorController {
 
     @ApiOperation(value = "Evaluar expresion para procesar la operacion.",response = EvaluadorRequest.class)
     @RequestMapping(value = "/evaluar", method = RequestMethod.POST)
-    public boolean evaluarExprecion(@RequestBody EvaluadorRequest request)
+    public EvaluadorResponse evaluarExpresion(@RequestBody EvaluadorRequest request)
     {
-        java.util.regex.Pattern pattern =
-                java.util.regex.Pattern.compile("(\\(*[0-9]+[+\\-*][0-9]\\)*)+([+\\-*][0-9])*");
-        java.util.regex.Matcher matcher = pattern.matcher(request.getExpresion());
-        return matcher.matches();
+
+        return Validador.getInstancia().isValido(request.getExpresion())?
+                new EvaluadorResponse(EvaluadorResponse.TipoRespuesta.EXITO):
+                new EvaluadorResponse(EvaluadorResponse.TipoRespuesta.ERROR,Validador.getInstancia().getValidacion(request.getExpresion()));
     }
 }
