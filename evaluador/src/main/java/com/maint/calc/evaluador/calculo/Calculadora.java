@@ -17,6 +17,7 @@
 package com.maint.calc.evaluador.calculo;
 
 
+import com.maint.calc.evaluador.servicios.ServicioCalculadora;
 import com.maint.calc.evaluador.util.Validador;
 
 /**
@@ -32,7 +33,9 @@ import com.maint.calc.evaluador.util.Validador;
  */
 
 public class Calculadora {
-    
+
+    ServicioCalculadora servicioCalculadora;
+
     /**
      * <p>Esta variable guarda la sentencia que se va a evaluar</p>
      * 
@@ -65,7 +68,9 @@ public class Calculadora {
      * @since 1.0
      */
     
-    private Calculadora(){}
+    public Calculadora(ServicioCalculadora servicioCalculadora){
+        this.servicioCalculadora = servicioCalculadora;
+    }
     
     /**
      * <p>Metodo que nos provee la instancia de la clase, en caso de no existir 
@@ -75,9 +80,9 @@ public class Calculadora {
      * @return <b>Instancia de la clase.</b>
      */
     
-    public static Calculadora getInstancia(){
+    /*public static Calculadora getInstancia(){
         return calculadora == null?calculadora = new Calculadora():calculadora;
-    }
+    }*/
     
     /**
      * <p>Metodo para ingresar una nueva sentencia.</p>
@@ -101,7 +106,7 @@ public class Calculadora {
      */
     
     private void ingresarExpresion(){
-        if(Validador.getInstancia().isValido(sentencia)) calculo = new Calculo(sentencia);
+        if(Validador.getInstancia().isValido(sentencia)) calculo = new Calculo(sentencia,servicioCalculadora);
     }
     
     /**
@@ -111,7 +116,7 @@ public class Calculadora {
      */
     
     public void forcarCalculo(){
-        calculo = new Calculo(sentencia);
+        calculo = new Calculo(sentencia,servicioCalculadora);
     }
     
     /**

@@ -1,9 +1,11 @@
 package com.maint.calc.evaluador.util;
 
 import com.maint.calc.evaluador.calculo.Calculadora;
+import com.maint.calc.evaluador.servicios.ServicioCalculadora;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -12,12 +14,14 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class ValidadorTest {
 
+    @Autowired
+    ServicioCalculadora servicioCalculadora;
 
 
     @Test
     public void isValido() {
         String expresion = "2*((-2*4)/9)";
-        Calculadora calculadora = Calculadora.getInstancia();
+        Calculadora calculadora = new Calculadora(servicioCalculadora);
         calculadora.setSentencia(expresion);
         System.out.println("Resultado: " + calculadora.getResultado());
         System.out.println("Notacion: " + calculadora.getNotacion());

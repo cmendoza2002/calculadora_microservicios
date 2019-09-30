@@ -16,6 +16,9 @@
 
 package com.maint.calc.evaluador.calculo;
 
+import com.maint.calc.evaluador.servicios.ServicioCalculadora;
+import org.springframework.beans.factory.annotation.Autowired;
+
 /**
  * <p>Esta clase se encarga de operar dos valores dados.</p>
  * 
@@ -28,7 +31,8 @@ package com.maint.calc.evaluador.calculo;
  */
 
 public class Operacion extends ExpresionBase {
-    
+
+
     /**
      * <p>Valores a operar.</p>
      * 
@@ -43,7 +47,7 @@ public class Operacion extends ExpresionBase {
      * @since 1.0
      */
     
-    private final Operadores operador;
+    private final Operador operador;
     
     /**
      * <p>Constructor de la clase que recibe los valores y la operacion que se 
@@ -55,10 +59,11 @@ public class Operacion extends ExpresionBase {
      * @param operador <i>Tipo de operacion que se va a realizar.</i>
      */
     
-    Operacion(ExpresionBase a, ExpresionBase b, Operadores operador) {
+    Operacion(ExpresionBase a, ExpresionBase b, Operador operador, ServicioCalculadora servicio) {
         this.a = a;
         this.b = b;
         this.operador = operador;
+        this.servicioCalculadora = servicio;
     }
     
     
@@ -82,8 +87,22 @@ public class Operacion extends ExpresionBase {
      * @return <i>Resultado de la expresion.</i>
      */
 
+
+    ServicioCalculadora servicioCalculadora;
+
     @Override
     double getValor() {
-        return operador.operar(a, b);
+        //return operador.operar(a, b);
+        switch(operador){
+            case SUMA:
+                return servicioCalculadora.sumar(a.getValor(),b.getValor());//a.getValor() + b.getValor();
+            case RESTA:
+                return servicioCalculadora.restar(a.getValor(),b.getValor());//a.getValor() - b.getValor();
+            case MULTIPLICACION:
+                return servicioCalculadora.multiplicar(a.getValor(),b.getValor());//a.getValor() * b.getValor();
+            default:
+                return servicioCalculadora.dividir(a.getValor(),b.getValor());//a.getValor() / b.getValor();
+        }
+        //return operador.operar(a, b);
     }
 }

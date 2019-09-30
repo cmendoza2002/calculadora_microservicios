@@ -25,7 +25,7 @@ package com.maint.calc.evaluador.calculo;
  * @since 1.0
  */
 
-public enum Operadores {
+public enum Operador {
     
     /**
      * <p>Las operaciones ingresadas son(entre parentesis se indica el caracter
@@ -60,7 +60,7 @@ public enum Operadores {
      * @param identificador <i>Caracter que identifica la operacion.</i>
      */
     
-    private Operadores(char identificador){
+    private Operador(char identificador){
         this.identificador = identificador;
     }
     
@@ -86,7 +86,7 @@ public enum Operadores {
      * @param b <i>Segundo valor, denominador en una operacion de tipo division</i>
      * @return <i>Resultado de la operacion.</i>
      */
-    
+
     double operar(ExpresionBase a, ExpresionBase b){
         switch(this){
             case SUMA:
@@ -111,7 +111,7 @@ public enum Operadores {
      * @return <i>La operacion que coincida con el identificador ingresado.</i>
      */
     
-    static Operadores obtenerOperador(char identificador){
+    static Operador obtenerOperador(char identificador){
         switch(identificador){
             case '+':
                 return SUMA;

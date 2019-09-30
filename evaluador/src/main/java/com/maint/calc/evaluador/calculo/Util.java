@@ -24,7 +24,7 @@ package com.maint.calc.evaluador.calculo;
  * @since 1.0
  */
 
-public class Utileria {
+public class Util {
     
     /**
      * <p>Este metodo revisa si un caracter es un caracter numerico.</p>

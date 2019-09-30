@@ -16,6 +16,8 @@
 
 package com.maint.calc.evaluador.calculo;
 
+import com.maint.calc.evaluador.servicios.ServicioCalculadora;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -46,7 +48,7 @@ public class Expresion extends ExpresionBase {
      * @since 1.0
      */
     
-    private final List<Operadores> operadores = new ArrayList<>();
+    private final List<Operador> operadores = new ArrayList<>();
     
     /**
      * <p>Texto con la expresion ingresada en la clase.</p>
@@ -64,8 +66,9 @@ public class Expresion extends ExpresionBase {
      * @param expresion <i>Expresion a tratar.</i>
      */
     
-    Expresion(String expresion) {
+    Expresion(String expresion, ServicioCalculadora servicio) {
         this.expresion = expresion;
+        this.servicio = servicio;
         tratarExpresion();
     }
     
@@ -87,18 +90,18 @@ public class Expresion extends ExpresionBase {
             switch(caracter){
                 case '-':case '+':case '*':case '/':
                     if(!aux.isEmpty())insertarElemento(new Numero(aux));
-                    operadores.add(Operadores.obtenerOperador(caracter));
+                    operadores.add(Operador.obtenerOperador(caracter));
                     aux = "";                    
                     break;
                 case '(':
                     int inicio = i + 1;
                     int cierre = getCierre(inicio);
-                    insertarElemento(new Expresion(expresion.substring(inicio, cierre)));
+                    insertarElemento(new Expresion(expresion.substring(inicio, cierre),servicio));
                     aux = "";
                     i = cierre;
                     break;
                 default:
-                    if(Utileria.isNumero(caracter) || caracter == '.'){
+                    if(Util.isNumero(caracter) || caracter == '.'){
                         aux = aux.concat(String.valueOf(caracter));
                     } else {
                         switch(caracter){
@@ -115,7 +118,7 @@ public class Expresion extends ExpresionBase {
         }      
         if(!aux.isEmpty())insertarElemento(new Numero(aux));
         insertarElemento(new Numero());
-        operadores.add(Operadores.SUMA);
+        operadores.add(Operador.SUMA);
     }
     
     /**
@@ -155,13 +158,13 @@ public class Expresion extends ExpresionBase {
      * @since 1.0
      * @param elemento <i>Elemento a ingresar en las lista.</i> 
      */
-    
+    ServicioCalculadora servicio;
     private void insertarElemento(ExpresionBase elemento){
-        if(!operadores.isEmpty() && (operadores.get(operadores.size() - 1)== Operadores.MULTIPLICACION
-                || operadores.get(operadores.size()-1)== Operadores.DIVISION)){
+        if(!operadores.isEmpty() && (operadores.get(operadores.size() - 1)== Operador.MULTIPLICACION
+                || operadores.get(operadores.size()-1)== Operador.DIVISION)){
             ExpresionBase anterior = elementos.get(elementos.size() - 1);
             elementos.remove(anterior);
-            elementos.add(new Operacion(anterior, elemento, operadores.get(operadores.size() - 1)));
+            elementos.add(new Operacion(anterior, elemento, operadores.get(operadores.size() - 1),servicio));
             operadores.remove(operadores.size() - 1);
         } else elementos.add(elemento);
     }
@@ -194,7 +197,7 @@ public class Expresion extends ExpresionBase {
         for(ExpresionBase elemento:elementos)aux = aux.concat("[")
                 .concat(elemento.showExpresion()).concat("]");
         aux = aux.concat(" ");
-        for(Operadores operador:operadores)aux = aux.concat(operador.toString());
+        for(Operador operador:operadores)aux = aux.concat(operador.toString());
         return aux.concat(")");
     }
     

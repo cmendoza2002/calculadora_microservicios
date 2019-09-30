@@ -16,8 +16,7 @@
 
 package com.maint.calc.evaluador.util;
 
-import com.maint.calc.evaluador.calculo.Operadores;
-import com.maint.calc.evaluador.calculo.Utileria;
+import com.maint.calc.evaluador.calculo.Util;
 
 /**
  * <p>Esta clase valida que la expresion ingresada sea correcta.</p>
@@ -197,8 +196,8 @@ public class Validador {
         sentencia = sentencia.replaceAll("\\)\\(", ")*(");
         String aux = String.valueOf(sentencia.charAt(0));
         for (int i = 1; i < sentencia.length() - 1; i++) {
-            if(sentencia.charAt(i)=='(' && Utileria.isNumero(sentencia.charAt(i - 1)))aux = aux.concat("*(");
-            else if(sentencia.charAt(i)==')' && Utileria.isNumero(sentencia.charAt(i + 1)))aux = aux.concat(")*");
+            if(sentencia.charAt(i)=='(' && Util.isNumero(sentencia.charAt(i - 1)))aux = aux.concat("*(");
+            else if(sentencia.charAt(i)==')' && Util.isNumero(sentencia.charAt(i + 1)))aux = aux.concat(")*");
             else aux = aux.concat(String.valueOf(sentencia.charAt(i)));
         }
         System.out.println(sentencia);

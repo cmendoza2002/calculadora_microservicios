@@ -16,6 +16,8 @@
 
 package com.maint.calc.evaluador.calculo;
 
+import com.maint.calc.evaluador.servicios.ServicioCalculadora;
+
 /**
  * <p>Esta clase es con la cual podemos acceder a un calculo sin necesidad de
  * utilizar la clase calculadora. Con lo cual podemos hacer calculos con una 
@@ -45,9 +47,9 @@ public class Calculo {
      * @since 1.0
      * @param sentencia <i>Sentenca a calcular.</i> 
      */
-    
-    public Calculo(String sentencia){
-        expresion = new Expresion(sentencia);
+    ServicioCalculadora servicio;
+    public Calculo(String sentencia, ServicioCalculadora servicio){
+        expresion = new Expresion(sentencia,servicio);
     }
     
     /**
