@@ -1,6 +1,6 @@
 spring:
   application:
-    name: evaluador-service
+    name: multiplicacion-service
 server:
   port: ${PORT:8084}
 eureka:
