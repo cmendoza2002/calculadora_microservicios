@@ -1,9 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="acab65e4-5340-4701-8709-a16cb7ffb255" name="Default Changelist" comment="">
+    <list default="true" id="acab65e4-5340-4701-8709-a16cb7ffb255" name="Default Changelist" comment="Cobertura de codigo">
+      <change afterPath="$PROJECT_DIR$/demo/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/demo3/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/demo3/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/demo3/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/demo3/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/demo3/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/demo3/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/demo3/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/demo3/src/main/java/com/example/demo/DemoApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/demo3/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/demo3/src/test/java/com/example/demo/DemoApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/DemoApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/test/java/com/example/demo/DemoApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/servicios/SumaClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculadora.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/Calculadora.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Calculadora.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Calculadora.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluador/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/evaluador/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/EvaluadorApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/EvaluadorApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/EvaluadorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/EvaluadorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/calculo/Calculadora.java" beforeDir="false" afterPath="$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/calculo/Calculadora.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/servicios/ServicioCalculadoraImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/servicios/ServicioCalculadoraImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/suma/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/suma/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/suma/src/main/java/com/maint/calc/suma/SumaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/suma/src/main/java/com/maint/calc/suma/SumaController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,41 +107,20 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Calculadora" type="f1a62948:ProjectNode" />
-                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+                <item name="evaluador" type="2d1252cf:ModuleNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Calculadora" type="f1a62948:ProjectNode" />
+                <item name="evaluador" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Calculadora" type="f1a62948:ProjectNode" />
+                <item name="evaluador" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Calculadora" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="other" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Calculadora" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="verification" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Calculadora" type="f1a62948:ProjectNode" />
-                <item name="suma" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Calculadora" type="f1a62948:ProjectNode" />
-                <item name="suma" type="2d1252cf:ModuleNode" />
-                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
               </path>
             </expand>
             <select />
@@ -131,6 +133,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -168,7 +171,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/suma/build/docker" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -180,6 +183,12 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
     <property name="show.run.dashboard.notification" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/suma/build/docker" />
+      <recent name="$PROJECT_DIR$/suma/build/libs" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -193,7 +202,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.Calculadora [jacocoTestReport]">
+  <component name="RunManager" selected="Spring Boot.EvaluadorApplication">
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
@@ -212,10 +221,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Calculadora [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Calculadora [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Calculadora:evaluador [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/evaluador" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Calculadora:evaluador [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/evaluador" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -231,64 +278,7 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="Calculadora [jacocoRootReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="jacocoRootReport" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="Calculadora [jacocoTestReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="jacocoTestReport" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="Calculadora [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="Calculadora:suma [jacocoTestReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Calculadora:suma [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/suma" />
@@ -299,7 +289,26 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="jacocoTestReport" />
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Calculadora:suma [dockerBuildImage]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/suma" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dockerBuildImage" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -345,8 +354,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RestaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="Calculadora.resta.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.maint.calc.resta.RestaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SumaService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="suma.main" />
+      <module name="Calculadora.suma.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.maint.calc.suma.SumaApplication" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
@@ -354,22 +370,23 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Gradle.Calculadora:suma [dockerBuildImage]" />
+      <item itemvalue="Gradle.Calculadora:suma [build]" />
       <item itemvalue="Spring Boot.SumaService" />
       <item itemvalue="Spring Boot.Discovery" />
       <item itemvalue="Spring Boot.EvaluadorApplication" />
-      <item itemvalue="Gradle.Calculadora [jacocoTestReport]" />
-      <item itemvalue="Gradle.Calculadora:suma [jacocoTestReport]" />
-      <item itemvalue="Gradle.Calculadora [jacocoRootReport]" />
-      <item itemvalue="Gradle.Calculadora [clean]" />
-      <item itemvalue="Gradle.Calculadora [test]" />
+      <item itemvalue="Spring Boot.RestaApplication" />
+      <item itemvalue="Gradle.Calculadora [build]" />
+      <item itemvalue="Gradle.Calculadora:evaluador [build]" />
+      <item itemvalue="Gradle.Calculadora:evaluador [clean]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Calculadora [test]" />
-        <item itemvalue="Gradle.Calculadora [clean]" />
-        <item itemvalue="Gradle.Calculadora [jacocoRootReport]" />
-        <item itemvalue="Gradle.Calculadora:suma [jacocoTestReport]" />
-        <item itemvalue="Gradle.Calculadora [jacocoTestReport]" />
+        <item itemvalue="Gradle.Calculadora:evaluador [clean]" />
+        <item itemvalue="Gradle.Calculadora:evaluador [build]" />
+        <item itemvalue="Gradle.Calculadora [build]" />
+        <item itemvalue="Gradle.Calculadora:suma [build]" />
+        <item itemvalue="Gradle.Calculadora:suma [dockerBuildImage]" />
       </list>
     </recent_temporary>
   </component>
@@ -386,7 +403,9 @@
       <workItem from="1569252364086" duration="1465000" />
       <workItem from="1569420234121" duration="132000" />
       <workItem from="1569420388046" duration="11989000" />
-      <workItem from="1569433911589" duration="11032000" />
+      <workItem from="1569433911589" duration="11725000" />
+      <workItem from="1569509233691" duration="26144000" />
+      <workItem from="1569938059656" duration="4726000" />
     </task>
     <task id="LOCAL-00001" summary="Primera Subida">
       <created>1569253266236</created>
@@ -430,7 +449,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569445847600</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Cobertura de codigo">
+      <created>1569447243000</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1569447243000</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -460,5 +486,21 @@
     <MESSAGE value="Cobertura de codigo" />
     <option name="LAST_COMMIT_MESSAGE" value="Cobertura de codigo" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/servicios/ServicioCalculadoraImp.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/servicios/ServicioCalculadoraImp.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

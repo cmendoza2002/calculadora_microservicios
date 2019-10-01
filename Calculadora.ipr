@@ -23,6 +23,8 @@
       <module name="Calculadora.evaluador.test" target="1.8" />
       <module name="Calculadora.main" target="1.8" />
       <module name="calculadora.main" target="1.8" />
+      <module name="Calculadora.resta.main" target="1.8" />
+      <module name="Calculadora.resta.test" target="1.8" />
       <module name="Calculadora.suma.main" target="1.8" />
       <module name="Calculadora.suma.test" target="1.8" />
       <module name="calculadora.test" target="1.8" />
@@ -53,6 +55,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/discovery" />
             <option value="$PROJECT_DIR$/evaluador" />
+            <option value="$PROJECT_DIR$/resta" />
             <option value="$PROJECT_DIR$/suma" />
           </set>
         </option>
@@ -93,6 +96,9 @@
       <module fileurl="file://$PROJECT_DIR$/evaluador/Calculadora.evaluador.main.iml" filepath="$PROJECT_DIR$/evaluador/Calculadora.evaluador.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluador/Calculadora.evaluador.test.iml" filepath="$PROJECT_DIR$/evaluador/Calculadora.evaluador.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/Calculadora.main.iml" filepath="$PROJECT_DIR$/Calculadora.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/resta/Calculadora.resta.iml" filepath="$PROJECT_DIR$/resta/Calculadora.resta.iml" />
+      <module fileurl="file://$PROJECT_DIR$/resta/Calculadora.resta.main.iml" filepath="$PROJECT_DIR$/resta/Calculadora.resta.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/resta/Calculadora.resta.test.iml" filepath="$PROJECT_DIR$/resta/Calculadora.resta.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/suma/Calculadora.suma.iml" filepath="$PROJECT_DIR$/suma/Calculadora.suma.iml" />
       <module fileurl="file://$PROJECT_DIR$/suma/Calculadora.suma.main.iml" filepath="$PROJECT_DIR$/suma/Calculadora.suma.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/suma/Calculadora.suma.test.iml" filepath="$PROJECT_DIR$/suma/Calculadora.suma.test.iml" />
@@ -326,15 +332,6 @@
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.5/c5b4c491aecb72e7c32a78da0b5c6b9cda8dee0f/gson-2.8.5-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Gradle: com.google.guava:guava:15.0">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/15.0/ed727a8d9f247e2050281cb083f1c77b09dcb5cd/guava-15.0.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/15.0/36b6a585c0f0c63bd85fb04db0dcb7b217298956/guava-15.0-sources.jar!/" />
-      </SOURCES>
-    </library>
     <library name="Gradle: com.google.guava:guava:19.0">
       <CLASSES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/19.0/6ce200f6b23222af3d8abb6b6459e6c44f4bb0e9/guava-19.0.jar!/" />
@@ -342,6 +339,15 @@
       <JAVADOC />
       <SOURCES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/19.0/91a4d115400e904f22b03a78deb355e9ea803cd4/guava-19.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: com.google.guava:guava:20.0">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/20.0/89507701249388e1ed5ddcf8c41f4ce1be7831ef/guava-20.0.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/20.0/9c8493c7991464839b612d7547d6c263adf08f75/guava-20.0-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Gradle: com.google.inject:guice:4.1.0">
@@ -650,6 +656,24 @@
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-configuration/commons-configuration/1.8/e4dbd8ad69e07fa7f28688f92d773a429143060b/commons-configuration-1.8-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Gradle: commons-fileupload:commons-fileupload:1.4">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-fileupload/commons-fileupload/1.4/f95188e3d372e20e7328706c37ef366e5d7859b0/commons-fileupload-1.4.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-fileupload/commons-fileupload/1.4/d50ee98902746c6a351662fa8b728189d1a30e90/commons-fileupload-1.4-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: commons-io:commons-io:2.2">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.2/83b5b8a7ba1c08f9e8c8ff2373724e33d3c1e22a/commons-io-2.2.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.2/8d6b98f21262995489a8418fff8da992d7e25c1e/commons-io-2.2-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Gradle: commons-jxpath:commons-jxpath:1.3">
       <CLASSES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-jxpath/commons-jxpath/1.3/c22d7d0f0f40eb7059a23cfa61773a416768b137/commons-jxpath-1.3.jar!/" />
@@ -666,6 +690,51 @@
       <JAVADOC />
       <SOURCES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-lang/commons-lang/2.6/67313d715fbf0ea4fd0bdb69217fb77f807a8ce5/commons-lang-2.6-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: io.github.openfeign.form:feign-form-spring:3.8.0">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.openfeign.form/feign-form-spring/3.8.0/71059f6e16ddbaf0e42f1b1aa0bb60cc2f823e4d/feign-form-spring-3.8.0.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.openfeign.form/feign-form-spring/3.8.0/34e856a101f27aae440a83780bb90684712738ae/feign-form-spring-3.8.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: io.github.openfeign.form:feign-form:3.8.0">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.openfeign.form/feign-form/3.8.0/3083889996b18443c275a352d3ab4bc6c8321598/feign-form-3.8.0.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.openfeign.form/feign-form/3.8.0/1a88e6c0bc93f64260daca9935e7b4f188d9e803/feign-form-3.8.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: io.github.openfeign:feign-core:10.2.3">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.openfeign/feign-core/10.2.3/4ef61aabdbf6b79140677dad985f339d7d99d3c1/feign-core-10.2.3.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.openfeign/feign-core/10.2.3/a9acc32b141ea7b6f27bc7df27a267310f6086d7/feign-core-10.2.3-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: io.github.openfeign:feign-hystrix:10.2.3">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.openfeign/feign-hystrix/10.2.3/16f4e2e34cdafff448d7fcc2542cab2de2cd1698/feign-hystrix-10.2.3.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.openfeign/feign-hystrix/10.2.3/59e3773be6cfa6861c37b4aaf44c24c861c81b4f/feign-hystrix-10.2.3-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: io.github.openfeign:feign-slf4j:10.2.3">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.openfeign/feign-slf4j/10.2.3/ab05fd9c575aaad7da1249aaef9ea764728203d/feign-slf4j-10.2.3.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.openfeign/feign-slf4j/10.2.3/8d23014d768009f07c417b66d9e71027d4620405/feign-slf4j-10.2.3-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Gradle: io.micrometer:micrometer-core:1.1.6">
@@ -720,6 +789,87 @@
       <JAVADOC />
       <SOURCES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.reactivex/rxnetty/0.4.9/e994f91f231c9301e23cb1eaee8c3aaa2abf61d8/rxnetty-0.4.9-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: io.springfox:springfox-core:2.9.2">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.springfox/springfox-core/2.9.2/2e26f58939c594fb5c958c3a1c7bedf83d2f2702/springfox-core-2.9.2.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.springfox/springfox-core/2.9.2/1249a80c52653c1400a70b9245f8832c833bc26c/springfox-core-2.9.2-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: io.springfox:springfox-schema:2.9.2">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.springfox/springfox-schema/2.9.2/e268f38774b16bb51a92ccaef0dcf3dc651c0cee/springfox-schema-2.9.2.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.springfox/springfox-schema/2.9.2/47e5bc544e04858d4509c46d0aba1b937e758b1e/springfox-schema-2.9.2-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: io.springfox:springfox-spi:2.9.2">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.springfox/springfox-spi/2.9.2/6ac686190a6ceaccdae8b50d03b0501d144a6666/springfox-spi-2.9.2.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.springfox/springfox-spi/2.9.2/4944f3419fe88345469b383cefee50fa952af70e/springfox-spi-2.9.2-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: io.springfox:springfox-spring-web:2.9.2">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.springfox/springfox-spring-web/2.9.2/ed2ed714a6cba8804d00f80f0534901e4c7a3211/springfox-spring-web-2.9.2.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.springfox/springfox-spring-web/2.9.2/f33fa4b530101f0fab063663028795cc1aa17d6f/springfox-spring-web-2.9.2-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: io.springfox:springfox-swagger-common:2.9.2">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.springfox/springfox-swagger-common/2.9.2/b38a41b3044af80cb7f41f67be5d158c9f6491ec/springfox-swagger-common-2.9.2.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.springfox/springfox-swagger-common/2.9.2/78938f219b4c9e3442bfd4a39f2cb706a34ff2a4/springfox-swagger-common-2.9.2-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: io.springfox:springfox-swagger-ui:2.0.2">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.springfox/springfox-swagger-ui/2.0.2/d282bd0c0321614206438942246ed850ee5ecde9/springfox-swagger-ui-2.0.2.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.springfox/springfox-swagger-ui/2.0.2/978eec2455dc933d196a36d0764c6bec5c2fec64/springfox-swagger-ui-2.0.2-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: io.springfox:springfox-swagger2:2.9.2">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.springfox/springfox-swagger2/2.9.2/362676bc7f4c6f9f1d568741becab0dfc198c898/springfox-swagger2-2.9.2.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.springfox/springfox-swagger2/2.9.2/d34aabbd077e382cdaf369ec7111068c3a45cfe2/springfox-swagger2-2.9.2-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: io.swagger:swagger-annotations:1.5.20">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.swagger/swagger-annotations/1.5.20/16051f93ce11ca489a5313775d825f82fcc2cd6c/swagger-annotations-1.5.20.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.swagger/swagger-annotations/1.5.20/fff338e626738539b51ab0eb747f5fd4bdaf4d71/swagger-annotations-1.5.20-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: io.swagger:swagger-models:1.5.20">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.swagger/swagger-models/1.5.20/fb3a23bad80c5ed84db9dd150db2cba699531458/swagger-models-1.5.20.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.swagger/swagger-models/1.5.20/645ed024a639bba92570cde6d93b87b575a6b58e/swagger-models-1.5.20-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Gradle: io.zipkin.brave:brave-context-log4j2:5.7.0">
@@ -1262,6 +1412,15 @@
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.latencyutils/LatencyUtils/2.0.3/fbc38259e2077a428984637d811dac542a6a913e/LatencyUtils-2.0.3-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Gradle: org.mapstruct:mapstruct:1.2.0.Final">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mapstruct/mapstruct/1.2.0.Final/8609d6eb044e9f6c73cb24c8f2f4ed5c72a249c7/mapstruct-1.2.0.Final.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mapstruct/mapstruct/1.2.0.Final/e7558cc36061a3a7d189c44b1ab146c9bb585b65/mapstruct-1.2.0.Final-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Gradle: org.mockito:mockito-core:2.23.4">
       <CLASSES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/2.23.4/a35b6f8ffcfa786771eac7d7d903429e790fdf3f/mockito-core-2.23.4.jar!/" />
@@ -1546,6 +1705,15 @@
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-netflix-ribbon/2.1.3.RELEASE/e24741f732637161c96835b413bcc61a66ea46c3/spring-cloud-netflix-ribbon-2.1.3.RELEASE-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Gradle: org.springframework.cloud:spring-cloud-openfeign-core:2.1.3.RELEASE">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-openfeign-core/2.1.3.RELEASE/9bcfbdf09a11430ac0268aaa77aa8121528034b0/spring-cloud-openfeign-core-2.1.3.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-openfeign-core/2.1.3.RELEASE/a81d6029eb792e7f0556357cc619fd938897b15f/spring-cloud-openfeign-core-2.1.3.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Gradle: org.springframework.cloud:spring-cloud-sleuth-core:2.1.3.RELEASE">
       <CLASSES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-sleuth-core/2.1.3.RELEASE/8fa3859ccc793368137729022bd09991746fcadd/spring-cloud-sleuth-core-2.1.3.RELEASE.jar!/" />
@@ -1609,6 +1777,15 @@
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-starter-netflix-ribbon/2.1.3.RELEASE/7c4d6e242249eec2b0ebc8c7032fb70b9932a757/spring-cloud-starter-netflix-ribbon-2.1.3.RELEASE-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Gradle: org.springframework.cloud:spring-cloud-starter-openfeign:2.1.3.RELEASE">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-starter-openfeign/2.1.3.RELEASE/ef6f065d2a9dc74ac4980e6e2caf73f5c39600ea/spring-cloud-starter-openfeign-2.1.3.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-starter-openfeign/2.1.3.RELEASE/819f748b1075d3f844b65b17711df973a8d08c80/spring-cloud-starter-openfeign-2.1.3.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Gradle: org.springframework.cloud:spring-cloud-starter-sleuth:2.1.3.RELEASE">
       <CLASSES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-starter-sleuth/2.1.3.RELEASE/ed2afcbfffe2a1e944907e0e32ba1c27678cbaf0/spring-cloud-starter-sleuth-2.1.3.RELEASE.jar!/" />
@@ -1643,6 +1820,24 @@
       <JAVADOC />
       <SOURCES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/2.1.10.RELEASE/6e315949c2406c93367b75718171ed0eb45315c9/spring-data-jpa-2.1.10.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.springframework.plugin:spring-plugin-core:1.2.0.RELEASE">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.plugin/spring-plugin-core/1.2.0.RELEASE/f380e7760032e7d929184f8ad8a33716b75c0657/spring-plugin-core-1.2.0.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.plugin/spring-plugin-core/1.2.0.RELEASE/112d82259202fa909d51cf7ccefae0c5523f1373/spring-plugin-core-1.2.0.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.springframework.plugin:spring-plugin-metadata:1.2.0.RELEASE">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.plugin/spring-plugin-metadata/1.2.0.RELEASE/97223fc496b6cab31602eedbd4202aa4fff0d44f/spring-plugin-metadata-1.2.0.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.plugin/spring-plugin-metadata/1.2.0.RELEASE/6551604dd9c0619bae2f5a244580fa9a0dc646bf/spring-plugin-metadata-1.2.0.RELEASE-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Gradle: org.springframework.security:spring-security-crypto:5.1.6.RELEASE">

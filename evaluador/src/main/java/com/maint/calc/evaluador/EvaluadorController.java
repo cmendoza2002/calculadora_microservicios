@@ -20,8 +20,12 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(value="calculadora/v1/evaluador")
 public class EvaluadorController {
 
+    //@Autowired
+    //ServicioCalculadora servicioCalculadora;
+
     @Autowired
-    ServicioCalculadora servicioCalculadora;
+    private Calculadora calculadora;
+
 
     @ApiOperation(value = "Evaluar expresion para procesar la operacion.",response = EvaluadorRequest.class)
     @RequestMapping(value = "/validar", method = RequestMethod.POST)
@@ -38,7 +42,7 @@ public class EvaluadorController {
     {
         if(Validador.getInstancia().isValido(request.getExpresion()))
         {
-            Calculadora calculadora = new Calculadora(servicioCalculadora);
+//            Calculadora calculadora = new Calculadora(servicioCalculadora);
             calculadora.setSentencia(request.getExpresion());
             try {
                 double resultado = calculadora.getResultado();

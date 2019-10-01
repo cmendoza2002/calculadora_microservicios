@@ -19,6 +19,8 @@ package com.maint.calc.evaluador.calculo;
 
 import com.maint.calc.evaluador.servicios.ServicioCalculadora;
 import com.maint.calc.evaluador.util.Validador;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 /**
  * <p>Esta clase nos sirve para revisar que las expresiones esten bien estructuradas, 
@@ -32,9 +34,10 @@ import com.maint.calc.evaluador.util.Validador;
  * @since 1.0
  */
 
+@Component
 public class Calculadora {
 
-    ServicioCalculadora servicioCalculadora;
+    private ServicioCalculadora servicioCalculadora;
 
     /**
      * <p>Esta variable guarda la sentencia que se va a evaluar</p>
@@ -67,7 +70,8 @@ public class Calculadora {
      * 
      * @since 1.0
      */
-    
+
+    @Autowired
     public Calculadora(ServicioCalculadora servicioCalculadora){
         this.servicioCalculadora = servicioCalculadora;
     }

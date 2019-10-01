@@ -11,13 +11,13 @@ import java.math.BigDecimal;
 public class SumaController {
 
     @RequestMapping(value="/suma", method= RequestMethod.GET)
-    public ResponseEntity<BigDecimal> sumar(@RequestParam("n") BigDecimal[] array)
+    public ResponseEntity<Double> sumar(@RequestParam("n") double[] array)
     {
 
-        BigDecimal total = BigDecimal.ZERO;
+        double total = 0.0;
         for(int i = 0 ; i <   array.length ; i++ )
         {
-            total = total.add(array[i]);
+            total = total + array[i];
         }
 
         return new ResponseEntity<>(total, HttpStatus.OK);
