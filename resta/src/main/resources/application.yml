@@ -1,0 +1,12 @@
+
+spring:
+  application:
+    name: resta-service
+server:
+  port: ${PORT:8083}
+eureka:
+  instance:
+    status-page-url-path: /swagger-ui.html
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka/}
