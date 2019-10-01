@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: evaluador-service
+server:
+  port: ${PORT:8085}
+eureka:
+  instance:
+    status-page-url-path: /swagger-ui.html
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka/}

@@ -1,1 +1,1 @@
-include 'evaluador' ,  'discovery', 'suma', 'resta'
+include 'evaluador' ,  'discovery', 'suma', 'resta', 'multiplicacion','division'

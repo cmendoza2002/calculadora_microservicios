@@ -17,9 +17,13 @@
 package com.maint.calc.evaluador.calculo;
 
 import com.maint.calc.evaluador.servicios.ServicioCalculadora;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.maint.calc.evaluador.calculo.Operador.*;
 
 /**
  * <p>Clase que se encarga de hacer las gestiones del segmento de <i>expresion</i></p>
@@ -31,9 +35,11 @@ import java.util.List;
  * @since 1.0
  * @see ExpresionBase
  */
-
 public class Expresion extends ExpresionBase {
-    
+
+
+
+
     /**
      * <p>Lista de elementos que contiene esta expresion.</p>
      * 
@@ -118,7 +124,7 @@ public class Expresion extends ExpresionBase {
         }      
         if(!aux.isEmpty())insertarElemento(new Numero(aux));
         insertarElemento(new Numero());
-        operadores.add(Operador.SUMA);
+        operadores.add(SUMA);
     }
     
     /**
@@ -160,7 +166,7 @@ public class Expresion extends ExpresionBase {
      */
     ServicioCalculadora servicio;
     private void insertarElemento(ExpresionBase elemento){
-        if(!operadores.isEmpty() && (operadores.get(operadores.size() - 1)== Operador.MULTIPLICACION
+        if(!operadores.isEmpty() && (operadores.get(operadores.size() - 1)== MULTIPLICACION
                 || operadores.get(operadores.size()-1)== Operador.DIVISION)){
             ExpresionBase anterior = elementos.get(elementos.size() - 1);
             elementos.remove(anterior);
@@ -207,7 +213,6 @@ public class Expresion extends ExpresionBase {
      * @since 1.0
      * @return <i>Resultado de la expresion.</i>
      */
-    
     @Override
     double getValor() {
         List<ExpresionBase> aux = copiarElementos();
@@ -217,8 +222,32 @@ public class Expresion extends ExpresionBase {
             ExpresionBase b = aux.get(1);
             aux.remove(a);
             aux.remove(b);
-            aux.add(0,new Numero(operador.operar(a, b)));
+            aux.add(0,new Numero(getValor(operador,a,b)));
         });
         return aux.get(0).getValor();
     }
+
+
+
+    /**
+     * <p>Obtiene el resultado de operar los valores con el operador ingresado.</p>
+     *
+     * @since 1.0
+     * @return <i>Resultado de la expresion.</i>
+     */
+
+    double getValor(Operador operador, ExpresionBase a, ExpresionBase b) {
+        switch(operador){
+            case SUMA:
+                return servicio.sumar(a.getValor(),b.getValor());//a.getValor() + b.getValor();
+            case RESTA:
+                return servicio.restar(a.getValor(),b.getValor());//a.getValor() - b.getValor();
+            case MULTIPLICACION:
+                return servicio.multiplicar(a.getValor(),b.getValor());//a.getValor() * b.getValor();
+            default:
+                return servicio.dividir(a.getValor(),b.getValor());//a.getValor() / b.getValor();
+        }
+
+    }
+
 }
