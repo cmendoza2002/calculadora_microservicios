@@ -17,9 +17,12 @@
 package com.maint.calc.evaluador.calculo;
 
 
+import com.maint.calc.evaluador.calculo.servicios.DivisionServicio;
+import com.maint.calc.evaluador.calculo.servicios.MultiplicacionServicio;
+import com.maint.calc.evaluador.calculo.servicios.RestaServicio;
+import com.maint.calc.evaluador.calculo.servicios.SumaServicio;
 import com.maint.calc.evaluador.servicios.ServicioCalculadora;
 import com.maint.calc.evaluador.util.Validador;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -34,10 +37,10 @@ import org.springframework.stereotype.Component;
  * @since 1.0
  */
 
-@Component
+
 public class Calculadora {
 
-    private ServicioCalculadora servicioCalculadora;
+
 
     /**
      * <p>Esta variable guarda la sentencia que se va a evaluar</p>
@@ -62,7 +65,7 @@ public class Calculadora {
      * @since 1.0
      */
     
-    private static Calculadora calculadora = null;
+    //private static Calculadora calculadora = null;
     
     /**
      * <p>Constructor privado de la clase para que quien se encarge de hacer los 
@@ -71,9 +74,20 @@ public class Calculadora {
      * @since 1.0
      */
 
-    @Autowired
-    public Calculadora(ServicioCalculadora servicioCalculadora){
-        this.servicioCalculadora = servicioCalculadora;
+    private final SumaServicio  sumaServicio;
+    private final RestaServicio restaServicio;
+    private final MultiplicacionServicio multiplicacionServicio;
+    private final DivisionServicio divisionServicio;
+
+
+
+
+    public Calculadora(SumaServicio sumaServicio, RestaServicio restaServicio, MultiplicacionServicio multiplicacionServicio, DivisionServicio divisionServicio){
+        this.sumaServicio = sumaServicio;
+        this.restaServicio = restaServicio;
+        //this.servicioCalculadora = servicioCalculadora;
+        this.multiplicacionServicio = multiplicacionServicio;
+        this.divisionServicio = divisionServicio;
     }
     
     /**
@@ -118,10 +132,10 @@ public class Calculadora {
      * 
      * @since 1.0
      */
-    
+   /*
     public void forcarCalculo(){
         calculo = new Calculo(sentencia,servicioCalculadora);
-    }
+    }*/
     
     /**
      * <p>Metodo que retorna si la expresion ingresada es valida.</p>

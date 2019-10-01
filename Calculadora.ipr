@@ -19,16 +19,22 @@
     <bytecodeTargetLevel>
       <module name="Calculadora.discovery.main" target="1.8" />
       <module name="Calculadora.discovery.test" target="1.8" />
+      <module name="Calculadora.division.main" target="1.8" />
+      <module name="Calculadora.division.test" target="1.8" />
       <module name="Calculadora.evaluador.main" target="1.8" />
       <module name="Calculadora.evaluador.test" target="1.8" />
       <module name="Calculadora.main" target="1.8" />
       <module name="calculadora.main" target="1.8" />
+      <module name="Calculadora.multiplicacion.main" target="1.8" />
+      <module name="Calculadora.multiplicacion.test" target="1.8" />
       <module name="Calculadora.resta.main" target="1.8" />
       <module name="Calculadora.resta.test" target="1.8" />
       <module name="Calculadora.suma.main" target="1.8" />
       <module name="Calculadora.suma.test" target="1.8" />
       <module name="calculadora.test" target="1.8" />
       <module name="Calculadora.test" target="1.8" />
+      <module name="configserver.main" target="1.8" />
+      <module name="configserver.test" target="1.8" />
       <module name="discovery" target="1.8" />
       <module name="SourceCode.Calculadora.main" target="1.8" />
       <module name="SourceCode.Calculadora.test" target="1.8" />
@@ -54,12 +60,24 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/discovery" />
+            <option value="$PROJECT_DIR$/division" />
             <option value="$PROJECT_DIR$/evaluador" />
+            <option value="$PROJECT_DIR$/multiplicacion" />
             <option value="$PROJECT_DIR$/resta" />
             <option value="$PROJECT_DIR$/suma" />
           </set>
         </option>
         <option name="useAutoImport" value="true" />
+        <option name="useQualifiedModuleNames" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/configserver" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/configserver" />
+          </set>
+        </option>
         <option name="useQualifiedModuleNames" value="true" />
       </GradleProjectSettings>
     </option>
@@ -86,16 +104,143 @@
   <component name="JavadocGenerationManager">
     <option name="OTHER_OPTIONS" value="" />
   </component>
+  <component name="Palette2">
+    <group name="Swing">
+      <item class="com.intellij.uiDesigner.HSpacer" tooltip-text="Horizontal Spacer" icon="/com/intellij/uiDesigner/icons/hspacer.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="1" hsize-policy="6" anchor="0" fill="1" />
+      </item>
+      <item class="com.intellij.uiDesigner.VSpacer" tooltip-text="Vertical Spacer" icon="/com/intellij/uiDesigner/icons/vspacer.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="1" anchor="0" fill="2" />
+      </item>
+      <item class="javax.swing.JPanel" icon="/com/intellij/uiDesigner/icons/panel.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3" />
+      </item>
+      <item class="javax.swing.JScrollPane" icon="/com/intellij/uiDesigner/icons/scrollPane.png" removable="false" auto-create-binding="false" can-attach-label="true">
+        <default-constraints vsize-policy="7" hsize-policy="7" anchor="0" fill="3" />
+      </item>
+      <item class="javax.swing.JButton" icon="/com/intellij/uiDesigner/icons/button.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="3" anchor="0" fill="1" />
+        <initial-values>
+          <property name="text" value="Button" />
+        </initial-values>
+      </item>
+      <item class="javax.swing.JRadioButton" icon="/com/intellij/uiDesigner/icons/radioButton.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
+        <initial-values>
+          <property name="text" value="RadioButton" />
+        </initial-values>
+      </item>
+      <item class="javax.swing.JCheckBox" icon="/com/intellij/uiDesigner/icons/checkBox.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
+        <initial-values>
+          <property name="text" value="CheckBox" />
+        </initial-values>
+      </item>
+      <item class="javax.swing.JLabel" icon="/com/intellij/uiDesigner/icons/label.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="0" anchor="8" fill="0" />
+        <initial-values>
+          <property name="text" value="Label" />
+        </initial-values>
+      </item>
+      <item class="javax.swing.JTextField" icon="/com/intellij/uiDesigner/icons/textField.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+          <preferred-size width="150" height="-1" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JPasswordField" icon="/com/intellij/uiDesigner/icons/passwordField.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+          <preferred-size width="150" height="-1" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JFormattedTextField" icon="/com/intellij/uiDesigner/icons/formattedTextField.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+          <preferred-size width="150" height="-1" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JTextArea" icon="/com/intellij/uiDesigner/icons/textArea.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JTextPane" icon="/com/intellij/uiDesigner/icons/textPane.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JEditorPane" icon="/com/intellij/uiDesigner/icons/editorPane.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JComboBox" icon="/com/intellij/uiDesigner/icons/comboBox.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="2" anchor="8" fill="1" />
+      </item>
+      <item class="javax.swing.JTable" icon="/com/intellij/uiDesigner/icons/table.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JList" icon="/com/intellij/uiDesigner/icons/list.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="2" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JTree" icon="/com/intellij/uiDesigner/icons/tree.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JTabbedPane" icon="/com/intellij/uiDesigner/icons/tabbedPane.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
+          <preferred-size width="200" height="200" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JSplitPane" icon="/com/intellij/uiDesigner/icons/splitPane.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
+          <preferred-size width="200" height="200" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JSpinner" icon="/com/intellij/uiDesigner/icons/spinner.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
+      </item>
+      <item class="javax.swing.JSlider" icon="/com/intellij/uiDesigner/icons/slider.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
+      </item>
+      <item class="javax.swing.JSeparator" icon="/com/intellij/uiDesigner/icons/separator.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3" />
+      </item>
+      <item class="javax.swing.JProgressBar" icon="/com/intellij/uiDesigner/icons/progressbar.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1" />
+      </item>
+      <item class="javax.swing.JToolBar" icon="/com/intellij/uiDesigner/icons/toolbar.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1">
+          <preferred-size width="-1" height="20" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JToolBar$Separator" icon="/com/intellij/uiDesigner/icons/toolbarSeparator.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="0" anchor="0" fill="1" />
+      </item>
+      <item class="javax.swing.JScrollBar" icon="/com/intellij/uiDesigner/icons/scrollbar.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="0" anchor="0" fill="2" />
+      </item>
+    </group>
+  </component>
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Calculadora.iml" filepath="$PROJECT_DIR$/Calculadora.iml" />
       <module fileurl="file://$PROJECT_DIR$/discovery/Calculadora.discovery.iml" filepath="$PROJECT_DIR$/discovery/Calculadora.discovery.iml" />
       <module fileurl="file://$PROJECT_DIR$/discovery/Calculadora.discovery.main.iml" filepath="$PROJECT_DIR$/discovery/Calculadora.discovery.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/discovery/Calculadora.discovery.test.iml" filepath="$PROJECT_DIR$/discovery/Calculadora.discovery.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/division/Calculadora.division.iml" filepath="$PROJECT_DIR$/division/Calculadora.division.iml" />
+      <module fileurl="file://$PROJECT_DIR$/division/Calculadora.division.main.iml" filepath="$PROJECT_DIR$/division/Calculadora.division.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/division/Calculadora.division.test.iml" filepath="$PROJECT_DIR$/division/Calculadora.division.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluador/Calculadora.evaluador.iml" filepath="$PROJECT_DIR$/evaluador/Calculadora.evaluador.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluador/Calculadora.evaluador.main.iml" filepath="$PROJECT_DIR$/evaluador/Calculadora.evaluador.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluador/Calculadora.evaluador.test.iml" filepath="$PROJECT_DIR$/evaluador/Calculadora.evaluador.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/Calculadora.main.iml" filepath="$PROJECT_DIR$/Calculadora.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/multiplicacion/Calculadora.multiplicacion.iml" filepath="$PROJECT_DIR$/multiplicacion/Calculadora.multiplicacion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/multiplicacion/Calculadora.multiplicacion.main.iml" filepath="$PROJECT_DIR$/multiplicacion/Calculadora.multiplicacion.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/multiplicacion/Calculadora.multiplicacion.test.iml" filepath="$PROJECT_DIR$/multiplicacion/Calculadora.multiplicacion.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/resta/Calculadora.resta.iml" filepath="$PROJECT_DIR$/resta/Calculadora.resta.iml" />
       <module fileurl="file://$PROJECT_DIR$/resta/Calculadora.resta.main.iml" filepath="$PROJECT_DIR$/resta/Calculadora.resta.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/resta/Calculadora.resta.test.iml" filepath="$PROJECT_DIR$/resta/Calculadora.resta.test.iml" />
@@ -105,6 +250,9 @@
       <module fileurl="file://$PROJECT_DIR$/Calculadora.test.iml" filepath="$PROJECT_DIR$/Calculadora.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/SourceCode.Calculadora.main.iml" filepath="$PROJECT_DIR$/SourceCode.Calculadora.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/SourceCode.Calculadora.test.iml" filepath="$PROJECT_DIR$/SourceCode.Calculadora.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/configserver/configserver.iml" filepath="$PROJECT_DIR$/configserver/configserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/configserver/configserver.main.iml" filepath="$PROJECT_DIR$/configserver/configserver.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/configserver/configserver.test.iml" filepath="$PROJECT_DIR$/configserver/configserver.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/discovery/discovery.iml" filepath="$PROJECT_DIR$/discovery/discovery.iml" />
     </modules>
   </component>
@@ -359,6 +507,15 @@
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.inject/guice/4.1.0/3f43f7c8743238f310246cfb13ba3e2e1aca6655/guice-4.1.0-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Gradle: com.googlecode.javaewah:JavaEWAH:1.1.6">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.googlecode.javaewah/JavaEWAH/1.1.6/94ad16d728b374d65bd897625f3fbb3da223a2b6/JavaEWAH-1.1.6.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.googlecode.javaewah/JavaEWAH/1.1.6/ca2745e91c6a51f8e6809d1579bda36ad83f1f58/JavaEWAH-1.1.6-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Gradle: com.h2database:h2:1.4.199">
       <CLASSES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.h2database/h2/1.4.199/7bf08152984ed8859740ae3f97fae6c72771ae45/h2-1.4.199.jar!/" />
@@ -375,6 +532,24 @@
       <JAVADOC />
       <SOURCES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jayway.jsonpath/json-path/2.4.0/c43fc506196089da87a7bb36ec847b57072a818b/json-path-2.4.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: com.jcraft:jsch:0.1.54">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jcraft/jsch/0.1.54/da3584329a263616e277e15462b387addd1b208d/jsch-0.1.54.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jcraft/jsch/0.1.54/91d6069df9be9e076bdb124e82fc2a9af9547616/jsch-0.1.54-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: com.jcraft:jzlib:1.1.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jcraft/jzlib/1.1.1/a1551373315ffc2f96130a0e5704f74e151777ba/jzlib-1.1.1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jcraft/jzlib/1.1.1/dc910806edfb4c9a4b4c7e439a9cd3a3f0a090a9/jzlib-1.1.1-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Gradle: com.netflix.archaius:archaius-core:0.7.6">
@@ -1286,6 +1461,24 @@
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.dom4j/dom4j/2.1.1/a474d56a9ff9ec5973268cb1e80ded8414ffdd40/dom4j-2.1.1-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Gradle: org.eclipse.jgit:org.eclipse.jgit.http.apache:5.1.3.201810200350-r">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jgit/org.eclipse.jgit.http.apache/5.1.3.201810200350-r/d98ca013eb8159b369af99e28be8b96a651c4f79/org.eclipse.jgit.http.apache-5.1.3.201810200350-r.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jgit/org.eclipse.jgit.http.apache/5.1.3.201810200350-r/911c1cc03c98194e4704525618fffb1995ed3019/org.eclipse.jgit.http.apache-5.1.3.201810200350-r-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.eclipse.jgit:org.eclipse.jgit:5.1.3.201810200350-r">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jgit/org.eclipse.jgit/5.1.3.201810200350-r/f270dbd1d792d5ad06074abe018a18644c90b60e/org.eclipse.jgit-5.1.3.201810200350-r.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jgit/org.eclipse.jgit/5.1.3.201810200350-r/e24ee2b721040edbb8520d705607a7f7bafd64/org.eclipse.jgit-5.1.3.201810200350-r-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Gradle: org.freemarker:freemarker:2.3.29">
       <CLASSES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.freemarker/freemarker/2.3.29/46005eeee02e4458520c85d0bcf5001467b053c3/freemarker-2.3.29.jar!/" />
@@ -1428,6 +1621,24 @@
       <JAVADOC />
       <SOURCES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/2.23.4/6878fee8002a77fc3d29d2407d9cb059e3792827/mockito-core-2.23.4-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.mockito:mockito-core:2.8.9">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/2.8.9/1afb35b2d77d40567756c379e54c18da3574a96e/mockito-core-2.8.9.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/2.8.9/45f340ae3e0a0d7a97a1cb8173a081a3856c41eb/mockito-core-2.8.9-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.objenesis:objenesis:2.5">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/2.5/612ecb799912ccf77cba9b3ed8c813da086076e9/objenesis-2.5.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/2.5/e2b450699731118d1498645e36577371afced20f/objenesis-2.5-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Gradle: org.objenesis:objenesis:2.6">
@@ -1649,6 +1860,15 @@
       <JAVADOC />
       <SOURCES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-config-client/2.1.4.RELEASE/c7d93b97856513fcfd8607e5e049a4c9d95788b7/spring-cloud-config-client-2.1.4.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.springframework.cloud:spring-cloud-config-server:2.1.4.RELEASE">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-config-server/2.1.4.RELEASE/f8b5ff2b869d1be406bac86c89fcce137a4a2fff/spring-cloud-config-server-2.1.4.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-config-server/2.1.4.RELEASE/4fcc996a1eee3c50ef23062223b796e6b6f0969/spring-cloud-config-server-2.1.4.RELEASE-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Gradle: org.springframework.cloud:spring-cloud-context:2.1.3.RELEASE">

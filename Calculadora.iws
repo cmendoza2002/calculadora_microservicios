@@ -1,32 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="acab65e4-5340-4701-8709-a16cb7ffb255" name="Default Changelist" comment="Cobertura de codigo">
-      <change afterPath="$PROJECT_DIR$/demo/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/demo3/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/demo3/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/demo3/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/demo3/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/demo3/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/demo3/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/demo3/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/demo3/src/main/java/com/example/demo/DemoApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/demo3/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/demo3/src/test/java/com/example/demo/DemoApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/DemoApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/test/java/com/example/demo/DemoApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/servicios/SumaClient.java" afterDir="false" />
+    <list default="true" id="acab65e4-5340-4701-8709-a16cb7ffb255" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/configserver/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configserver/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configserver/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configserver/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configserver/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configserver/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configserver/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configserver/src/main/java/com/maint/calc/configserver/ConfigserverApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configserver/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configserver/src/test/java/com/maint/calc/configserver/ConfigserverApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/calculo/servicios/DivisionServicio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/calculo/servicios/MultiplicacionServicio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/calculo/servicios/RestaServicio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/calculo/servicios/SumaServicio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/infraestructura/DivisionServicioImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/infraestructura/MultiplicacionServicioImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/infraestructura/ServicioRestaImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/infraestructura/ServicioSumaImp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Calculadora.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/Calculadora.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Calculadora.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Calculadora.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/discovery/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/evaluador/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/evaluador/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/EvaluadorApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/EvaluadorApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/EvaluadorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/EvaluadorController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/calculo/Calculadora.java" beforeDir="false" afterPath="$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/calculo/Calculadora.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/servicios/ServicioCalculadoraImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/servicios/ServicioCalculadoraImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/suma/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/suma/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/suma/src/main/java/com/maint/calc/suma/SumaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/suma/src/main/java/com/maint/calc/suma/SumaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/servicios/SumaClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/infraestructura/feing/SumaClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluador/src/test/java/com/maint/calc/evaluador/calculo/CalculadoraTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/evaluador/src/test/java/com/maint/calc/evaluador/calculo/CalculadoraTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,6 +79,9 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+    <projectState path="$PROJECT_DIR$/configserver">
+      <ProjectState />
+    </projectState>
     <projectState path="$PROJECT_DIR$/suma">
       <ProjectState />
     </projectState>
@@ -107,18 +111,22 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Calculadora" type="f1a62948:ProjectNode" />
-                <item name="evaluador" type="2d1252cf:ModuleNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Calculadora" type="f1a62948:ProjectNode" />
-                <item name="evaluador" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Calculadora" type="f1a62948:ProjectNode" />
-                <item name="evaluador" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="application" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Calculadora" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
               </path>
@@ -132,8 +140,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -202,7 +210,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.EvaluadorApplication">
+  <component name="RunManager" selected="Gradle.CalculadoraTest.getResultado">
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
@@ -238,6 +246,45 @@
         <option name="vmOptions" />
       </ExternalSystemSettings>
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Calculadora [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CalculadoraTest.getResultado" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.maint.calc.evaluador.calculo.CalculadoraTest.getResultado&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":evaluador:cleanTest" />
+            <option value=":evaluador:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
     <configuration name="Calculadora:evaluador [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -278,44 +325,6 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="Calculadora:suma [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/suma" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="Calculadora:suma [dockerBuildImage]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/suma" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="dockerBuildImage" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
@@ -339,6 +348,13 @@
         <option name="BuildArtifacts" enabled="false" />
       </method>
     </configuration>
+    <configuration name="ConfigserverApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="configserver.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.maint.calc.configserver.ConfigserverApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Discovery" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="Calculadora.discovery.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.maint.calc.discovery.DiscoveryApplication" />
@@ -347,9 +363,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DivisionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="Calculadora.division.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.maint.calc.division.DivisionApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EvaluadorApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="Calculadora.evaluador.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.maint.calc.evaluador.EvaluadorApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MultiplicacionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="Calculadora.multiplicacion.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.maint.calc.multiplicacion.MultiplicacionApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -370,23 +400,26 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.Calculadora:suma [dockerBuildImage]" />
-      <item itemvalue="Gradle.Calculadora:suma [build]" />
+      <item itemvalue="Gradle.Calculadora [build]" />
+      <item itemvalue="Gradle.Calculadora:evaluador [build]" />
+      <item itemvalue="Gradle.Calculadora:evaluador [clean]" />
       <item itemvalue="Spring Boot.SumaService" />
       <item itemvalue="Spring Boot.Discovery" />
       <item itemvalue="Spring Boot.EvaluadorApplication" />
       <item itemvalue="Spring Boot.RestaApplication" />
-      <item itemvalue="Gradle.Calculadora [build]" />
-      <item itemvalue="Gradle.Calculadora:evaluador [build]" />
-      <item itemvalue="Gradle.Calculadora:evaluador [clean]" />
+      <item itemvalue="Spring Boot.ConfigserverApplication" />
+      <item itemvalue="Spring Boot.DivisionApplication" />
+      <item itemvalue="Spring Boot.MultiplicacionApplication" />
+      <item itemvalue="Gradle.Calculadora [clean]" />
+      <item itemvalue="Gradle.CalculadoraTest.getResultado" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CalculadoraTest.getResultado" />
+        <item itemvalue="Gradle.Calculadora [clean]" />
         <item itemvalue="Gradle.Calculadora:evaluador [clean]" />
         <item itemvalue="Gradle.Calculadora:evaluador [build]" />
         <item itemvalue="Gradle.Calculadora [build]" />
-        <item itemvalue="Gradle.Calculadora:suma [build]" />
-        <item itemvalue="Gradle.Calculadora:suma [dockerBuildImage]" />
       </list>
     </recent_temporary>
   </component>
@@ -405,7 +438,7 @@
       <workItem from="1569420388046" duration="11989000" />
       <workItem from="1569433911589" duration="11725000" />
       <workItem from="1569509233691" duration="26144000" />
-      <workItem from="1569938059656" duration="4726000" />
+      <workItem from="1569938059656" duration="9101000" />
     </task>
     <task id="LOCAL-00001" summary="Primera Subida">
       <created>1569253266236</created>
@@ -456,7 +489,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569447243000</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="cliente open feing">
+      <created>1569943131742</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1569943131742</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -484,7 +524,8 @@
     <MESSAGE value="Configuracion de Jenkins iniciada" />
     <MESSAGE value="Tarea de compilacion agregada al jenkinfile" />
     <MESSAGE value="Cobertura de codigo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cobertura de codigo" />
+    <MESSAGE value="cliente open feing" />
+    <option name="LAST_COMMIT_MESSAGE" value="cliente open feing" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -492,13 +533,18 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/servicios/ServicioCalculadoraImp.java</url>
-          <line>18</line>
+          <line>25</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/servicios/ServicioCalculadoraImp.java</url>
-          <line>16</line>
+          <line>24</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/calculo/servicios/SumaServicio.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

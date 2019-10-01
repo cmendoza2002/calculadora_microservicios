@@ -1,21 +1,28 @@
 package com.maint.calc.evaluador.servicios;
 
+import com.maint.calc.evaluador.calculo.Calculadora;
+import com.maint.calc.evaluador.infraestructura.feing.SumaClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
-import java.math.BigDecimal;
 
 @Component
 public class ServicioCalculadoraImp implements ServicioCalculadora{
 
-    @Autowired
-    private SumaClient sumaClient;
+
+
+
+
+    public double evaluar(String exprecion)
+    {
+        Calculadora calculadora = new Calculadora(sumaClient);
+    }
+
+
 
 
     @Override
     public double sumar(double a, double b) {
         double[] numeros = {a,b};
-        System.out.println("ssssssssssssssssssssssssssssssssssssssssss");
         return sumaClient.sumar(numeros);
     }
 
