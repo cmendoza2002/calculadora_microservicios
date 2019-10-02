@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="acab65e4-5340-4701-8709-a16cb7ffb255" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Calculadora.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Calculadora.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluador/src/test/java/com/maint/calc/evaluador/calculo/CalculadoraTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/evaluador/src/test/java/com/maint/calc/evaluador/calculo/CalculadoraTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluador/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/evaluador/build.gradle" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -442,7 +444,7 @@
       <workItem from="1569433911589" duration="11725000" />
       <workItem from="1569509233691" duration="26144000" />
       <workItem from="1569938059656" duration="11894000" />
-      <workItem from="1570027435931" duration="5704000" />
+      <workItem from="1570027435931" duration="9552000" />
     </task>
     <task id="LOCAL-00001" summary="Primera Subida">
       <created>1569253266236</created>
@@ -521,7 +523,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570037095791</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="correccion de test">
+      <created>1570038287666</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1570038287666</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

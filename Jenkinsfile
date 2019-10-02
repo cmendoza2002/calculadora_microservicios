@@ -19,15 +19,9 @@ pipeline {
                }
           }
 
-          stage("Code coverage") {
+          stage("Code Analisis") {
                steps {
-                    sh "./gradlew jacocoTestReport"
-                    publishHTML (target: [
-                                   reportDir: 'discovery/build/reports/jacoco/test/html',
-                                   reportFiles: 'index.html',
-                                   reportName: "JaCoCo Report"
-                    ])
-                    sh "./gradlew jacocoTestCoverageVerification"
+                    sh "./gradlew -Dsonar.host.url=http://192.168.7.126:9001 -Dsonar.login=admin  -Dsonar.password=admin sonarqube"
                }
           }
      }
