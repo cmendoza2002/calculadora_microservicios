@@ -24,7 +24,7 @@ public class EvaluadorController {
     //ServicioCalculadora servicioCalculadora;
 
     @Autowired
-    private Calculadora calculadora;
+    private ServicioCalculadora servicioCalculadora;
 
 
     @ApiOperation(value = "Evaluar expresion para procesar la operacion.",response = EvaluadorRequest.class)
@@ -43,9 +43,9 @@ public class EvaluadorController {
         if(Validador.getInstancia().isValido(request.getExpresion()))
         {
 //            Calculadora calculadora = new Calculadora(servicioCalculadora);
-            calculadora.setSentencia(request.getExpresion());
+            //calculadora.setSentencia(request.getExpresion());
             try {
-                double resultado = calculadora.getResultado();
+                double resultado = servicioCalculadora.evaluar(request.getExpresion());
                 OperacionResponse response = new OperacionResponse(resultado);
                 return response;
             }

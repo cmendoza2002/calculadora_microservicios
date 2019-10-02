@@ -85,7 +85,6 @@ public class Calculadora {
     public Calculadora(SumaServicio sumaServicio, RestaServicio restaServicio, MultiplicacionServicio multiplicacionServicio, DivisionServicio divisionServicio){
         this.sumaServicio = sumaServicio;
         this.restaServicio = restaServicio;
-        //this.servicioCalculadora = servicioCalculadora;
         this.multiplicacionServicio = multiplicacionServicio;
         this.divisionServicio = divisionServicio;
     }
@@ -124,7 +123,7 @@ public class Calculadora {
      */
     
     private void ingresarExpresion(){
-        if(Validador.getInstancia().isValido(sentencia)) calculo = new Calculo(sentencia,servicioCalculadora);
+        if(Validador.getInstancia().isValido(sentencia)) calculo = new Calculo(sentencia,sumaServicio, restaServicio, multiplicacionServicio, divisionServicio);
     }
     
     /**

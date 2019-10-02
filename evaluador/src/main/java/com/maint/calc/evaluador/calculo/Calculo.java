@@ -16,6 +16,10 @@
 
 package com.maint.calc.evaluador.calculo;
 
+import com.maint.calc.evaluador.calculo.servicios.DivisionServicio;
+import com.maint.calc.evaluador.calculo.servicios.MultiplicacionServicio;
+import com.maint.calc.evaluador.calculo.servicios.RestaServicio;
+import com.maint.calc.evaluador.calculo.servicios.SumaServicio;
 import com.maint.calc.evaluador.servicios.ServicioCalculadora;
 
 /**
@@ -47,9 +51,17 @@ public class Calculo {
      * @since 1.0
      * @param sentencia <i>Sentenca a calcular.</i> 
      */
-    ServicioCalculadora servicio;
-    public Calculo(String sentencia, ServicioCalculadora servicio){
-        expresion = new Expresion(sentencia,servicio);
+    private final SumaServicio  sumaServicio;
+    private final RestaServicio restaServicio;
+    private final MultiplicacionServicio multiplicacionServicio;
+    private final DivisionServicio divisionServicio;
+
+    public Calculo(String sentencia, SumaServicio sumaServicio, RestaServicio restaServicio, MultiplicacionServicio multiplicacionServicio, DivisionServicio divisionServicio){
+        this.sumaServicio = sumaServicio;
+        this.restaServicio = restaServicio;
+        this.multiplicacionServicio = multiplicacionServicio;
+        this.divisionServicio = divisionServicio;
+        expresion = new Expresion(sentencia,sumaServicio, restaServicio, multiplicacionServicio, divisionServicio);
     }
     
     /**

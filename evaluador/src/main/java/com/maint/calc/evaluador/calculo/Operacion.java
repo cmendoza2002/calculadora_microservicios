@@ -16,6 +16,10 @@
 
 package com.maint.calc.evaluador.calculo;
 
+import com.maint.calc.evaluador.calculo.servicios.DivisionServicio;
+import com.maint.calc.evaluador.calculo.servicios.MultiplicacionServicio;
+import com.maint.calc.evaluador.calculo.servicios.RestaServicio;
+import com.maint.calc.evaluador.calculo.servicios.SumaServicio;
 import com.maint.calc.evaluador.servicios.ServicioCalculadora;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -58,12 +62,18 @@ public class Operacion extends ExpresionBase {
      * @param b <i>Segundo valor, denominador en una operacion de tipo division</i>
      * @param operador <i>Tipo de operacion que se va a realizar.</i>
      */
-    
-    Operacion(ExpresionBase a, ExpresionBase b, Operador operador, ServicioCalculadora servicio) {
+    private final SumaServicio  sumaServicio;
+    private final RestaServicio restaServicio;
+    private final MultiplicacionServicio multiplicacionServicio;
+    private final DivisionServicio divisionServicio;
+    Operacion(ExpresionBase a, ExpresionBase b, Operador operador, SumaServicio sumaServicio, RestaServicio restaServicio, MultiplicacionServicio multiplicacionServicio, DivisionServicio divisionServicio){
+        this.sumaServicio = sumaServicio;
+        this.restaServicio = restaServicio;
+        this.multiplicacionServicio = multiplicacionServicio;
+        this.divisionServicio = divisionServicio;
         this.a = a;
         this.b = b;
         this.operador = operador;
-        this.servicioCalculadora = servicio;
     }
     
     
@@ -87,21 +97,18 @@ public class Operacion extends ExpresionBase {
      * @return <i>Resultado de la expresion.</i>
      */
 
-
-    ServicioCalculadora servicioCalculadora;
-
     @Override
     double getValor() {
         //return operador.operar(a, b);
         switch(operador){
             case SUMA:
-                return servicioCalculadora.sumar(a.getValor(),b.getValor());//a.getValor() + b.getValor();
+                return sumaServicio.calcular(a.getValor(),b.getValor());//a.getValor() + b.getValor();
             case RESTA:
-                return servicioCalculadora.restar(a.getValor(),b.getValor());//a.getValor() - b.getValor();
+                return restaServicio.calcular(a.getValor(),b.getValor());//a.getValor() - b.getValor();
             case MULTIPLICACION:
-                return servicioCalculadora.multiplicar(a.getValor(),b.getValor());//a.getValor() * b.getValor();
+                return multiplicacionServicio.calcular(a.getValor(),b.getValor());//a.getValor() * b.getValor();
             default:
-                return servicioCalculadora.dividir(a.getValor(),b.getValor());//a.getValor() / b.getValor();
+                return divisionServicio.calcular(a.getValor(),b.getValor());//a.getValor() / b.getValor();
         }
         //return operador.operar(a, b);
     }

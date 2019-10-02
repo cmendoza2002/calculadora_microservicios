@@ -16,6 +16,10 @@
 
 package com.maint.calc.evaluador.calculo;
 
+import com.maint.calc.evaluador.calculo.servicios.DivisionServicio;
+import com.maint.calc.evaluador.calculo.servicios.MultiplicacionServicio;
+import com.maint.calc.evaluador.calculo.servicios.RestaServicio;
+import com.maint.calc.evaluador.calculo.servicios.SumaServicio;
 import com.maint.calc.evaluador.servicios.ServicioCalculadora;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -71,10 +75,16 @@ public class Expresion extends ExpresionBase {
      * @since 1.0
      * @param expresion <i>Expresion a tratar.</i>
      */
-    
-    Expresion(String expresion, ServicioCalculadora servicio) {
+    private final SumaServicio  sumaServicio;
+    private final RestaServicio restaServicio;
+    private final MultiplicacionServicio multiplicacionServicio;
+    private final DivisionServicio divisionServicio;
+    Expresion(String expresion, SumaServicio sumaServicio, RestaServicio restaServicio, MultiplicacionServicio multiplicacionServicio, DivisionServicio divisionServicio){
+        this.sumaServicio = sumaServicio;
+        this.restaServicio = restaServicio;
+        this.multiplicacionServicio = multiplicacionServicio;
+        this.divisionServicio = divisionServicio;
         this.expresion = expresion;
-        this.servicio = servicio;
         tratarExpresion();
     }
     
@@ -102,7 +112,7 @@ public class Expresion extends ExpresionBase {
                 case '(':
                     int inicio = i + 1;
                     int cierre = getCierre(inicio);
-                    insertarElemento(new Expresion(expresion.substring(inicio, cierre),servicio));
+                    insertarElemento(new Expresion(expresion.substring(inicio, cierre),sumaServicio, restaServicio, multiplicacionServicio, divisionServicio));
                     aux = "";
                     i = cierre;
                     break;
@@ -164,13 +174,13 @@ public class Expresion extends ExpresionBase {
      * @since 1.0
      * @param elemento <i>Elemento a ingresar en las lista.</i> 
      */
-    ServicioCalculadora servicio;
+
     private void insertarElemento(ExpresionBase elemento){
         if(!operadores.isEmpty() && (operadores.get(operadores.size() - 1)== MULTIPLICACION
                 || operadores.get(operadores.size()-1)== Operador.DIVISION)){
             ExpresionBase anterior = elementos.get(elementos.size() - 1);
             elementos.remove(anterior);
-            elementos.add(new Operacion(anterior, elemento, operadores.get(operadores.size() - 1),servicio));
+            elementos.add(new Operacion(anterior, elemento, operadores.get(operadores.size() - 1),sumaServicio, restaServicio, multiplicacionServicio, divisionServicio));
             operadores.remove(operadores.size() - 1);
         } else elementos.add(elemento);
     }
@@ -239,13 +249,13 @@ public class Expresion extends ExpresionBase {
     double getValor(Operador operador, ExpresionBase a, ExpresionBase b) {
         switch(operador){
             case SUMA:
-                return servicio.sumar(a.getValor(),b.getValor());//a.getValor() + b.getValor();
+                return sumaServicio.calcular(a.getValor(),b.getValor());//a.getValor() + b.getValor();
             case RESTA:
-                return servicio.restar(a.getValor(),b.getValor());//a.getValor() - b.getValor();
+                return restaServicio.calcular(a.getValor(),b.getValor());//a.getValor() - b.getValor();
             case MULTIPLICACION:
-                return servicio.multiplicar(a.getValor(),b.getValor());//a.getValor() * b.getValor();
+                return multiplicacionServicio.calcular(a.getValor(),b.getValor());//a.getValor() * b.getValor();
             default:
-                return servicio.dividir(a.getValor(),b.getValor());//a.getValor() / b.getValor();
+                return divisionServicio.calcular(a.getValor(),b.getValor());//a.getValor() / b.getValor();
         }
 
     }
