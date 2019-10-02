@@ -4,6 +4,10 @@ import com.maint.calc.evaluador.calculo.servicios.DivisionServicio;
 import com.maint.calc.evaluador.calculo.servicios.MultiplicacionServicio;
 import com.maint.calc.evaluador.calculo.servicios.RestaServicio;
 import com.maint.calc.evaluador.calculo.servicios.SumaServicio;
+import com.maint.calc.evaluador.infraestructura.DivisionServicioImp;
+import com.maint.calc.evaluador.infraestructura.MultiplicacionServicioImp;
+import com.maint.calc.evaluador.infraestructura.ServicioRestaImp;
+import com.maint.calc.evaluador.infraestructura.ServicioSumaImp;
 import com.maint.calc.evaluador.servicios.ServicioCalculadoraImp;
 import com.maint.calc.evaluador.infraestructura.feing.SumaClient;
 import org.junit.Assert;
@@ -22,14 +26,14 @@ import static org.mockito.Mockito.*;
 @SpringBootTest
 public class CalculadoraTest {
 
-    @Autowired
-    SumaServicio sumaServicio;
-    @Autowired
-    RestaServicio restaServicio;
-    @Autowired
-    MultiplicacionServicio multiplicacionServicio;
-    @Autowired
-    DivisionServicio divisionServicio;
+    @InjectMocks
+    ServicioSumaImp sumaServicio;
+    @InjectMocks
+    ServicioRestaImp restaServicio;
+    @InjectMocks
+    MultiplicacionServicioImp multiplicacionServicio;
+    @InjectMocks
+    DivisionServicioImp divisionServicio;
 
 
     @Mock
