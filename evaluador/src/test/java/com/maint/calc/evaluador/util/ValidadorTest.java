@@ -14,40 +14,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class ValidadorTest {
 
-    @Autowired
-    ServicioCalculadora servicioCalculadora;
-
-
     @Test
     public void isValido() {
-        String expresion = "2*((-2*4)/9)";
-        Calculadora calculadora = new Calculadora(servicioCalculadora);
-        calculadora.setSentencia(expresion);
-        System.out.println("Resultado: " + calculadora.getResultado());
-        System.out.println("Notacion: " + calculadora.getNotacion());
-
-
-        String[] sentencias = {
-                "1+1",
-                "23*(9-8)",
-                "*2",
-                "2*2*2*2*2",
-                "1234$",
-                "23(9*(9)"
-        };
-
-        for(String sentencia:sentencias){
-            calculadora.setSentencia(sentencia);
-            if(calculadora.isValido()){
-                System.out.println("Sentencia " + sentencia + " valida");
-                System.out.println("Resultado: " + calculadora.getResultado());
-                System.out.println("Notacion: " + calculadora.getNotacion());
-            } else {
-                System.out.println("Sentencia " + sentencia + " no valida");
-                System.out.println("Valor no valido detalles: " + calculadora.showValidacion());
-            }
-        }
-
 
         Assert.assertEquals(true,Validador.getInstancia().isValido("1+1"));
         Assert.assertEquals(false,Validador.getInstancia().isValido("1j1"));
