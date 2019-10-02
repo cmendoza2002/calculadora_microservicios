@@ -21,7 +21,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import static org.mockito.Mockito.*;
-
+import static org.junit.Assert.*;
 //@RunWith(SpringRunner.class)
 //@SpringBootTest
 public class CalculadoraTest {
@@ -81,6 +81,39 @@ public class CalculadoraTest {
                 System.out.println("Valor no valido detalles: " + calculadora.showValidacion());
             }
         }
+
+    }
+
+
+
+
+    @Test
+    public void testGetResultado() {
+
+          SumaServicio sumaServicio = (x,y) -> x+y;
+          RestaServicio restaServicio  = (x,y) -> x-y;
+          MultiplicacionServicio multiplicacionServicio =   (x,y) -> x*y;
+          DivisionServicio divisionServicio =  (x,y) -> x/y;
+
+
+        Calculadora calculadora = new Calculadora(sumaServicio, restaServicio, multiplicacionServicio, divisionServicio);
+        calculadora.setSentencia("2+2");
+        assertEquals(4.0,calculadora.getResultado(),0.00001);
+
+
+
+        calculadora.setSentencia("(10+10)/20");
+        assertEquals(1.0,calculadora.getResultado(),0.00001);
+
+
+        calculadora.setSentencia("(10+10+10)/3");
+        assertEquals(10.0,calculadora.getResultado(),0.00001);
+
+
+        calculadora.setSentencia("(10*10*10)/20");
+        assertEquals(50.0,calculadora.getResultado(),0.00001);
+
+
 
     }
 }

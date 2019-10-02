@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acab65e4-5340-4701-8709-a16cb7ffb255" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/evaluador/gradle.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Calculadora.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Calculadora.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluador/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/evaluador/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluador/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/evaluador/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluador/src/test/java/com/maint/calc/evaluador/servicios/ServicioCalculadoraImpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/evaluador/src/test/java/com/maint/calc/evaluador/servicios/ServicioCalculadoraImpTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluador/src/test/java/com/maint/calc/evaluador/calculo/CalculadoraTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/evaluador/src/test/java/com/maint/calc/evaluador/calculo/CalculadoraTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -191,6 +188,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.maint.calc.evaluador.calculo" />
       <recent name="com.maint.calc.evaluador.servicios" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -213,7 +211,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.ServicioCalculadoraImpTest.evaluar">
+  <component name="RunManager" selected="Gradle.CalculadoraTest.testGetResultado">
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
@@ -232,31 +230,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Calculadora [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="CalculadoraTest.getResultado" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="--tests &quot;com.maint.calc.evaluador.calculo.CalculadoraTest.getResultado&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":evaluador:cleanTest" />
+            <option value=":evaluador:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CalculadoraTest.testGetResultado" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.maint.calc.evaluador.calculo.CalculadoraTest.testGetResultado&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -404,7 +403,6 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.Calculadora [clean]" />
       <item itemvalue="Gradle.CalculadoraTest.getResultado" />
       <item itemvalue="Gradle.ServicioCalculadoraImpTest.evaluar" />
       <item itemvalue="Spring Boot.SumaService" />
@@ -416,14 +414,15 @@
       <item itemvalue="Spring Boot.MultiplicacionApplication" />
       <item itemvalue="Gradle.Calculadora:evaluador [sonarqube]" />
       <item itemvalue="Gradle.Calculadora:evaluador [build]" />
+      <item itemvalue="Gradle.CalculadoraTest.testGetResultado" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CalculadoraTest.testGetResultado" />
         <item itemvalue="Gradle.ServicioCalculadoraImpTest.evaluar" />
         <item itemvalue="Gradle.Calculadora:evaluador [build]" />
         <item itemvalue="Gradle.Calculadora:evaluador [sonarqube]" />
         <item itemvalue="Gradle.CalculadoraTest.getResultado" />
-        <item itemvalue="Gradle.Calculadora [clean]" />
       </list>
     </recent_temporary>
   </component>
@@ -443,7 +442,7 @@
       <workItem from="1569433911589" duration="11725000" />
       <workItem from="1569509233691" duration="26144000" />
       <workItem from="1569938059656" duration="11894000" />
-      <workItem from="1570027435931" duration="4502000" />
+      <workItem from="1570027435931" duration="5704000" />
     </task>
     <task id="LOCAL-00001" summary="Primera Subida">
       <created>1569253266236</created>
@@ -515,7 +514,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570028835315</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="correccion de test">
+      <created>1570037095791</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1570037095791</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -546,7 +552,8 @@
     <MESSAGE value="cliente open feing" />
     <MESSAGE value="Correccion del modelo de dominio" />
     <MESSAGE value="test arreglados" />
-    <option name="LAST_COMMIT_MESSAGE" value="test arreglados" />
+    <MESSAGE value="correccion de test" />
+    <option name="LAST_COMMIT_MESSAGE" value="correccion de test" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
