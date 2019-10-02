@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acab65e4-5340-4701-8709-a16cb7ffb255" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/evaluador/src/test/java/com/maint/calc/evaluador/servicios/ServicioCalculadoraImpTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculadora.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/Calculadora.ipr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/evaluador/gradle.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Calculadora.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Calculadora.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/servicios/ServicioCalculadora.java" beforeDir="false" afterPath="$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/servicios/ServicioCalculadora.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/servicios/ServicioCalculadoraImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/servicios/ServicioCalculadoraImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluador/src/test/java/com/maint/calc/evaluador/calculo/CalculadoraTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/evaluador/src/test/java/com/maint/calc/evaluador/calculo/CalculadoraTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluador/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/evaluador/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluador/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/evaluador/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluador/src/test/java/com/maint/calc/evaluador/servicios/ServicioCalculadoraImpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/evaluador/src/test/java/com/maint/calc/evaluador/servicios/ServicioCalculadoraImpTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -96,19 +95,34 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Calculadora" type="f1a62948:ProjectNode" />
+                <item name="evaluador" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Calculadora" type="f1a62948:ProjectNode" />
+                <item name="evaluador" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Calculadora" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="application" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Calculadora" type="f1a62948:ProjectNode" />
+                <item name="evaluador" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Calculadora" type="f1a62948:ProjectNode" />
+                <item name="evaluador" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Calculadora" type="f1a62948:ProjectNode" />
+                <item name="evaluador" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -199,7 +213,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.CalculadoraTest.getResultado">
+  <component name="RunManager" selected="Gradle.ServicioCalculadoraImpTest.evaluar">
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
@@ -276,7 +290,7 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="Calculadora:evaluador [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Calculadora:evaluador [sonarqube]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/evaluador" />
@@ -287,7 +301,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="clean" />
+            <option value="sonarqube" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -390,8 +404,6 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.Calculadora:evaluador [build]" />
-      <item itemvalue="Gradle.Calculadora:evaluador [clean]" />
       <item itemvalue="Gradle.Calculadora [clean]" />
       <item itemvalue="Gradle.CalculadoraTest.getResultado" />
       <item itemvalue="Gradle.ServicioCalculadoraImpTest.evaluar" />
@@ -402,14 +414,16 @@
       <item itemvalue="Spring Boot.ConfigserverApplication" />
       <item itemvalue="Spring Boot.DivisionApplication" />
       <item itemvalue="Spring Boot.MultiplicacionApplication" />
+      <item itemvalue="Gradle.Calculadora:evaluador [sonarqube]" />
+      <item itemvalue="Gradle.Calculadora:evaluador [build]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.CalculadoraTest.getResultado" />
         <item itemvalue="Gradle.ServicioCalculadoraImpTest.evaluar" />
-        <item itemvalue="Gradle.Calculadora [clean]" />
-        <item itemvalue="Gradle.Calculadora:evaluador [clean]" />
         <item itemvalue="Gradle.Calculadora:evaluador [build]" />
+        <item itemvalue="Gradle.Calculadora:evaluador [sonarqube]" />
+        <item itemvalue="Gradle.CalculadoraTest.getResultado" />
+        <item itemvalue="Gradle.Calculadora [clean]" />
       </list>
     </recent_temporary>
   </component>
@@ -429,7 +443,7 @@
       <workItem from="1569433911589" duration="11725000" />
       <workItem from="1569509233691" duration="26144000" />
       <workItem from="1569938059656" duration="11894000" />
-      <workItem from="1570027435931" duration="1354000" />
+      <workItem from="1570027435931" duration="4502000" />
     </task>
     <task id="LOCAL-00001" summary="Primera Subida">
       <created>1569253266236</created>
@@ -494,7 +508,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569947531903</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="test arreglados">
+      <created>1570028835315</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1570028835315</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -524,7 +545,8 @@
     <MESSAGE value="Cobertura de codigo" />
     <MESSAGE value="cliente open feing" />
     <MESSAGE value="Correccion del modelo de dominio" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correccion del modelo de dominio" />
+    <MESSAGE value="test arreglados" />
+    <option name="LAST_COMMIT_MESSAGE" value="test arreglados" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -534,6 +556,11 @@
           <url>file://$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/calculo/servicios/SumaServicio.java</url>
           <line>7</line>
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/evaluador/src/main/java/com/maint/calc/evaluador/calculo/Expresion.java</url>
+          <line>251</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
