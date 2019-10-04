@@ -46,10 +46,10 @@ public class Expresion extends ExpresionBase {
 
     /**
      * <p>Lista de elementos que contiene esta expresion.</p>
-     * 
+     *
      * @since 1.0
      */
-    
+
     private final List<ExpresionBase> elementos = new ArrayList<>();
     
     /**
@@ -62,10 +62,10 @@ public class Expresion extends ExpresionBase {
     
     /**
      * <p>Texto con la expresion ingresada en la clase.</p>
-     * 
+     *
      * @since 1.0
      */
-    
+
     private final String expresion;
     
     /**
@@ -200,21 +200,6 @@ public class Expresion extends ExpresionBase {
             aux.add(elemento);
         });
         return aux;
-    }
-    /**
-     * <p>Retorna la expresion en notacion <i>.</i></p>
-     * 
-     * @since 1.0
-     * @return <i>Cadena con la notacion n de la expresion</i>
-     */
-    @Override
-    String showExpresion() {
-        String aux = "(";
-        for(ExpresionBase elemento:elementos)aux = aux.concat("[")
-                .concat(elemento.showExpresion()).concat("]");
-        aux = aux.concat(" ");
-        for(Operador operador:operadores)aux = aux.concat(operador.toString());
-        return aux.concat(")");
     }
     
     /**

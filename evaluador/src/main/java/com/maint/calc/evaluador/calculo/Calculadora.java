@@ -21,9 +21,7 @@ import com.maint.calc.evaluador.calculo.servicios.DivisionServicio;
 import com.maint.calc.evaluador.calculo.servicios.MultiplicacionServicio;
 import com.maint.calc.evaluador.calculo.servicios.RestaServicio;
 import com.maint.calc.evaluador.calculo.servicios.SumaServicio;
-import com.maint.calc.evaluador.servicios.ServicioCalculadora;
 import com.maint.calc.evaluador.util.Validador;
-import org.springframework.stereotype.Component;
 
 /**
  * <p>Esta clase nos sirve para revisar que las expresiones esten bien estructuradas, 
@@ -40,46 +38,29 @@ import org.springframework.stereotype.Component;
 
 public class Calculadora {
 
+    /**
+     * Valida las expresiones pasadas como string
+     */
+    private Validador validador;
 
+    /**
+     * <p>Expresion a calcular. Es una clase <i>{@link Expresion}</i>.</p>
+     *
+     * @since 1.0
+     */
 
-    /**
-     * <p>Esta variable guarda la sentencia que se va a evaluar</p>
-     * 
-     * @since 1.0
-     */
-    
-    private String sentencia = "";
-    
-    /**
-     * <p>Esta clase es la que calcula el resultado de una expresion.</p>
-     * 
-     * @since 1.0
-     */
-    
-    private Calculo calculo = null;
-    
-    /**
-     * <p>Variable para que no se instancie mas de una calculadora por ejecucion de
-     * programa.</p>
-     * 
-     * @since 1.0
-     */
-    
-    //private static Calculadora calculadora = null;
-    
+    private Expresion expresion = null;
+
     /**
      * <p>Constructor privado de la clase para que quien se encarge de hacer los 
      * calculos solo sea un objeto y este no sea replicable.</p>
      * 
      * @since 1.0
      */
-
     private final SumaServicio  sumaServicio;
     private final RestaServicio restaServicio;
     private final MultiplicacionServicio multiplicacionServicio;
     private final DivisionServicio divisionServicio;
-
-
 
 
     public Calculadora(SumaServicio sumaServicio, RestaServicio restaServicio, MultiplicacionServicio multiplicacionServicio, DivisionServicio divisionServicio){
@@ -87,149 +68,25 @@ public class Calculadora {
         this.restaServicio = restaServicio;
         this.multiplicacionServicio = multiplicacionServicio;
         this.divisionServicio = divisionServicio;
+        validador = new Validador();
     }
-    
-    /**
-     * <p>Metodo que nos provee la instancia de la clase, en caso de no existir 
-     * la construye</p>
-     * 
-     * @since 1.0
-     * @return <b>Instancia de la clase.</b>
-     */
-    
-    /*public static Calculadora getInstancia(){
-        return calculadora == null?calculadora = new Calculadora():calculadora;
-    }*/
     
     /**
      * <p>Metodo para ingresar una nueva sentencia.</p>
      * 
-     * <p>La sentencia se formatea para que sea valida, en caso de ser posible.</p>
+     * <p>La sentencia se formatea para que sea valida, en caso de ser posible. y realiza las operaciones</p>
      * 
      * @since 1.0
      * @param sentencia <i>Sentencia ingresada en la clase.</i>
      */
-    
-    public void setSentencia(String sentencia){
-        this.sentencia = formatearSentencia(sentencia);
-        ingresarExpresion();
+    public double calcularExpresion(String sentencia){
+        if(validador.isValido(sentencia))
+        {
+            expresion = new Expresion(sentencia,sumaServicio, restaServicio, multiplicacionServicio, divisionServicio);
+            return expresion.getValor();
+        }
+        throw new ECalculadora();
     }
-    
-    /**
-     * <p>Metodo que ingresa la expresion en el objeto que se encargara de realizar
-     * el calculo, en caso de ser valido.</p>
-     * 
-     * @since 1.0
-     */
-    
-    private void ingresarExpresion(){
-        if(Validador.getInstancia().isValido(sentencia)) calculo = new Calculo(sentencia,sumaServicio, restaServicio, multiplicacionServicio, divisionServicio);
-    }
-    
-    /**
-     * <p>Ingresa la expresion sin revisar que sea valida.</p>
-     * 
-     * @since 1.0
-     */
-   /*
-    public void forcarCalculo(){
-        calculo = new Calculo(sentencia,servicioCalculadora);
-    }*/
-    
-    /**
-     * <p>Metodo que retorna si la expresion ingresada es valida.</p>
-     * 
-     * <p>En caso de no haber ingresado ninguna expresion y se llama este metodo, 
-     * se retorna false.</p>
-     * 
-     * @since 1.0
-     * @return <b><i>Booleano</i> que indica si la expresion
-     * es valida.</b>
-     */
-    
-    public boolean isValido(){
-        return Validador.getInstancia().isValido(sentencia);
-    }
-    
-    /**
-     * <p>Retorna un string con un resumen de la validacion.</p>
-     * 
-     * @since 1.0
-     * @return <b>Resumen de la validacion.</b>
-     */
-    
-    public String showValidacion(){
-        return Validador.getInstancia().getValidacion(sentencia);
-    }
-    
-    /**
-     * <p>Retorna la sentencia que se ingreso en la calculadora.</p>
-     * 
-     * @since 1.0
-     * @return <b>Sentencia.</b>
-     */
-    
-    public String getSentencia(){
-        return sentencia;
-    }
-    
-    /**
-     * <p>Este metodo retorna la notacion  que se utiliza para
-     * dar el resultado a la expresion.</p>
-     * 
-     * @since 1.0
-     * @return <b>Expresion en notacion .</b>
-     */
-    
-    public String getNotacion(){
-        if(calculo ==null)throw new ECalculadora();
-        return calculo.showExpresion();
-    }
-    
-    /**
-     * <p>Retorna el resultado de la operacion.</p>
-     * 
-     * <p>En caso de no haber ingresado una expresion retorna una excepcion en
-     * tiempo de ejecucion.</p>
-     * 
-     * @since 1.0
-     * @return <b>Resultado de la operacion</b>
-     */
-    
-    public double getResultado(){
-        if(calculo ==null)throw new ECalculadora();
-        return calculo.getResultado();
-    }
-    
-    /**
-     * <p>Retorna un arreglo con las banderas de la validacion.</p>
-     * 
-     * <p>El primer valor indica si la expresion cumple con la REGEX general. El
-     * segundo nos indica si los parentesis cierran de manera correcta.</p>
-     * 
-     * @since 1.0
-     * @return <b>Banderas de la validacion.</b>
-     */
-    
-    public boolean[] getBanderas(){
-        return Validador.getInstancia().getBanderas(sentencia);
-    }
-    
-    /**
-     * <p>Este metodo ingresa ciertos operadores en caso de que en la expresion
-     * ingresada se hubieran obviado. Casos:</p>
-     * <ul>
-     *  <li>Expresion: "(1)(1)" Formato: "(1)*(1)"</li>
-     *  <li>Expresion: "1(2)" Formato: "1*(1)"</li>
-     *  <li>Expresion: "(1)1" Formato: "(1)*1"</li>
-     * </ul>
-     * 
-     * @since 1.0
-     * @param sentencia <b>Se ingresa la sentencia que se va a evaluar.</b>
-     * @return <b>Sentencia formateada</b>
-     */
-    private String formatearSentencia(String sentencia){
 
-        return Validador.getInstancia().formatearSentencia(sentencia);
-    }
+
 }

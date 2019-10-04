@@ -36,38 +36,8 @@ public class Validador {
      * 
      * @since 1.0
      */
-    
     private final String REGEX = "^[\\(]*(([-]|[\\+])?[\\d]+([.][\\d]+)?)([\\)]*(\\+|\\*|\\/|-)([\\(][-]?)*([\\d]+([.][\\d]+)?)[\\)]*)*[\\)]*$";
-    
-    /**
-     * <p>Instancia de la clase</p>
-     * 
-     * @since 1.0
-     */
-    
-    private static Validador validador = null;
-    
-    /**
-     * <p>Contructor por defecto de la clase, es privado para que no pueda ser
-     * construido fuera de la instancia unica.</p>
-     * 
-     * @since 1.0
-     */
-    private Validador(){}
-    
-    /**
-     * <p>Metodo con el que se obtiene la instancia de la clase, en caso de no 
-     * estar inicializada se construye.</p>
-     * 
-     * @since 1.0
-     * @return <i>Retorna instancia del validador.</i>
-     */
-    
-    public static Validador getInstancia(){
-        if(validador == null)validador = new Validador();
-        return validador;
-    }
-    
+
     /**
      * <p>Revisa si se cumplen todos los parametros de validacion.</p>
      * 
@@ -77,7 +47,6 @@ public class Validador {
      * <i style="color:blue">true</i>, en caso contrario retorna
      * <i style="color:blue">false</i>.</b>
      */
-    
     public boolean isValido(String sentencia){
         return sentencia.matches(REGEX) && isParenctecisCorrectos(sentencia);
     }
@@ -90,7 +59,6 @@ public class Validador {
      * @return <b>Retorna un mensaje que detalla las validaciones de la expresion
      * ingresada.</b>
      */
-    
     public String getValidacion(String sentencia){
         return "General: ".concat(getGeneral(sentencia)).concat("|Parentecis: ").concat(getValidacionParentencis(sentencia));
     }

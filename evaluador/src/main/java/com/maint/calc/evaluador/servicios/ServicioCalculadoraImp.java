@@ -24,8 +24,8 @@ public class ServicioCalculadoraImp implements ServicioCalculadora{
     public double evaluar(String expresion)
     {
         Calculadora calculadora = new Calculadora(sumaServicio, restaServicio, multiplicacionServicio, divisionServicio);
-        calculadora.setSentencia(expresion);
-        return calculadora.getResultado();
+        double resultado = calculadora.calcularExpresion(expresion);
+        return resultado;
     }
 
 

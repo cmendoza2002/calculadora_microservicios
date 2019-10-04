@@ -20,30 +20,26 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(value="calculadora/v1/evaluador")
 public class EvaluadorController {
 
-    //@Autowired
-    //ServicioCalculadora servicioCalculadora;
-
     @Autowired
     private ServicioCalculadora servicioCalculadora;
 
+    private Validador validador = new Validador();
 
     @ApiOperation(value = "Evaluar expresion para procesar la operacion.",response = EvaluadorRequest.class)
     @RequestMapping(value = "/validar", method = RequestMethod.POST)
     public EvaluadorResponse validarExpresion(@RequestBody EvaluadorRequest request)
     {
-        return Validador.getInstancia().isValido(request.getExpresion())?
+        return validador.isValido(request.getExpresion())?
                 new EvaluadorResponse(EvaluadorResponse.TipoRespuesta.EXITO):
-                new EvaluadorResponse(EvaluadorResponse.TipoRespuesta.ERROR,Validador.getInstancia().getValidacion(request.getExpresion()));
+                new EvaluadorResponse(EvaluadorResponse.TipoRespuesta.ERROR,validador.getValidacion(request.getExpresion()));
     }
 
     @ApiOperation(value = "Evaluar expresion para procesar la operacion.",response = EvaluadorRequest.class)
     @RequestMapping(value = "/procesar", method = RequestMethod.POST)
     public OperacionResponse procesarExpresion(@RequestBody EvaluadorRequest request)
     {
-        if(Validador.getInstancia().isValido(request.getExpresion()))
+        if(validador.isValido(request.getExpresion()))
         {
-//            Calculadora calculadora = new Calculadora(servicioCalculadora);
-            //calculadora.setSentencia(request.getExpresion());
             try {
                 double resultado = servicioCalculadora.evaluar(request.getExpresion());
                 OperacionResponse response = new OperacionResponse(resultado);
@@ -54,6 +50,6 @@ public class EvaluadorController {
                 return new OperacionResponse(EvaluadorResponse.TipoRespuesta.ERROR, e.getMessage());
             }
         }
-        return new OperacionResponse(EvaluadorResponse.TipoRespuesta.ERROR,Validador.getInstancia().getValidacion(request.getExpresion()));
+        return new OperacionResponse(EvaluadorResponse.TipoRespuesta.ERROR,validador.getValidacion(request.getExpresion()));
     }
 }

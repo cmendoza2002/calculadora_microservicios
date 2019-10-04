@@ -36,16 +36,6 @@ public abstract class ExpresionBase {
     ExpresionBase(){}
     
     /**
-     * <p>Metodo a implementar para mostrar la notacion  del
-     * elemento.</p>
-     * 
-     * @since 1.0
-     * @return <i>Notacion .</i>
-     */
-    
-    abstract String showExpresion();
-    
-    /**
      * <p>Metodo a implementar para obtener el valor que tiene el elemento.</p>
      * 
      * @since 1.0

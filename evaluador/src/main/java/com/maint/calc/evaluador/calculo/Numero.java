@@ -75,19 +75,7 @@ public class Numero extends ExpresionBase {
     Numero(double valor){
         this.valor = valor;
     }
-    
-    /**
-     * <p>Retorna la expresion en notacion <i>.</i></p>
-     * 
-     * @since 1.0
-     * @return <i>Cadena con la notacion n de la expresion</i>
-     */
-    
-    @Override
-    String showExpresion() {
-        return String.valueOf(valor);
-    }
-    
+
     /**
      * <p>Obtiene el valor de la clase.</p>
      * 

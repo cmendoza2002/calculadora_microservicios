@@ -75,20 +75,7 @@ public class Operacion extends ExpresionBase {
         this.b = b;
         this.operador = operador;
     }
-    
-    
-    /**
-     * <p>Retorna la expresion en notacion <i>.</i></p>
-     * 
-     * @since 1.0
-     * @return <i>Cadena con la notacion n de la expresion</i>
-     */
-    
-    @Override
-    String showExpresion() {
-        return "{[".concat(a.showExpresion()).concat("][").concat(b.showExpresion())
-                .concat("] ").concat(operador.toString()).concat("}");
-    }
+
     
     /**
      * <p>Obtiene el resultado de operar los valores con el operador ingresado.</p>
