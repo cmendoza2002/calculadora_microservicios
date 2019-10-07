@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class RestaController {
-    @RequestMapping(value="/resta", method= RequestMethod.GET)
+    @RequestMapping(value="/restar", method= RequestMethod.GET)
     public ResponseEntity<Double> restar(@RequestParam("a") double a, @RequestParam("b") double b)
     {
         double total = a - b;

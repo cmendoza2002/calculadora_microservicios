@@ -16,7 +16,7 @@ public class SumaControllerTest extends TestCase {
 
     @Test
     public void sumar() {
-        assertEquals(4.0,sumaController.sumar(new double[]{2.0,2.0}).getBody(),0.0001);
+        assertEquals(4.0,sumaController.sumar(2.0,2.0).getBody(),0.0001);
     }
 
 }

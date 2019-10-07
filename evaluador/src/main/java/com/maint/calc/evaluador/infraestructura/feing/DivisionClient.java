@@ -4,9 +4,9 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(name = "SUMA-SERVICE")
-public interface SumaClient {
+@FeignClient(name = "DIVISION-SERVICE")
+public interface DivisionClient {
 
-    @GetMapping("/sumar")
-    double sumar(@RequestParam("a") double a, @RequestParam("b") double b);
+    @GetMapping("/dividir")
+    double dividir(@RequestParam("a") double a, @RequestParam("b") double b);
 }

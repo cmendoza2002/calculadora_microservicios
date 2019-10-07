@@ -49,7 +49,7 @@ public class CalculadoraTest {
         assertEquals(4,res,0.001);
 
         expresion = "2*((-2*4)/9)";
-        calculadora.calcularExpresion(expresion);
+        //calculadora.calcularExpresion(expresion);
         /*System.out.println("Resultado: " + calculadora.evaluarExpresion(expresion));
 
         String[] sentencias = {

@@ -10,16 +10,10 @@ import java.math.BigDecimal;
 @RestController
 public class SumaController {
 
-    @RequestMapping(value="/suma", method= RequestMethod.GET)
-    public ResponseEntity<Double> sumar(@RequestParam("n") double[] array)
+    @RequestMapping(value="/sumar", method= RequestMethod.GET)
+    public ResponseEntity<Double> sumar(@RequestParam("a") double a, @RequestParam("b") double b)
     {
-
-        double total = 0.0;
-        for(int i = 0 ; i <   array.length ; i++ )
-        {
-            total = total + array[i];
-        }
-
+        double total = a + b;
         return new ResponseEntity<>(total, HttpStatus.OK);
     }
 

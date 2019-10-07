@@ -11,11 +11,10 @@ import java.math.BigDecimal;
 public class ServicioSumaImp  implements SumaServicio {
 
     @Autowired
-    private SumaClient sumaClient;
+    private SumaClient client;
 
     @Override
     public double calcular(double a, double b) {
-        double[] num = {a,b};
-        return sumaClient.sumar(num);
+        return client.sumar(a,b);
     }
 }

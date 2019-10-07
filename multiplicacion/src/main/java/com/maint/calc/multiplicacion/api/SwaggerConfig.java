@@ -19,14 +19,14 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
     public Docket productApi() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.maint.calc.evaluador"))
+                .apis(RequestHandlerSelectors.basePackage("com.maint.calc.multiplicacion"))
                 .build()
                 .apiInfo(metaData());
     }
     private ApiInfo metaData() {
         return new ApiInfoBuilder()
-                .title("API REST")
-                .description("\"REST API\"")
+                .title("API REST del microservicio de multiplicacion")
+                .description("\"REST API del microservicio de multiplicacion\"")
                 .version("1.0.0")
                 .license("Apache License Version 2.0")
                 .licenseUrl("https://www.apache.org/licenses/LICENSE-2.0\"")
