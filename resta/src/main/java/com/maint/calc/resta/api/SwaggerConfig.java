@@ -25,8 +25,8 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
     }
     private ApiInfo metaData() {
         return new ApiInfoBuilder()
-                .title("API REST")
-                .description("\"REST API\"")
+                .title("API REST para Resta")
+                .description("\"REST API para la operacion de resta\"")
                 .version("1.0.0")
                 .license("Apache License Version 2.0")
                 .licenseUrl("https://www.apache.org/licenses/LICENSE-2.0\"")

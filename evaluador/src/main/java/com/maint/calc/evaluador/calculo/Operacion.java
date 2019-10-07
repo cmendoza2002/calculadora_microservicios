@@ -86,7 +86,6 @@ public class Operacion extends ExpresionBase {
 
     @Override
     double getValor() {
-        //return operador.operar(a, b);
         switch(operador){
             case SUMA:
                 return sumaServicio.calcular(a.getValor(),b.getValor());//a.getValor() + b.getValor();
@@ -97,6 +96,5 @@ public class Operacion extends ExpresionBase {
             default:
                 return divisionServicio.calcular(a.getValor(),b.getValor());//a.getValor() / b.getValor();
         }
-        //return operador.operar(a, b);
     }
 }
