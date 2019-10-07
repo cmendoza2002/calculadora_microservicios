@@ -60,7 +60,7 @@ public enum Operador {
      * @param identificador <i>Caracter que identifica la operacion.</i>
      */
     
-    private Operador(char identificador){
+    Operador(char identificador){
         this.identificador = identificador;
     }
     
@@ -76,30 +76,7 @@ public enum Operador {
     public String toString(){
         return String.valueOf(identificador);
     }
-    
-    /**
-     * <p>Opera dos valores que son ingresados, dependiendo de la operacion en la 
-     * que se esta mandando a llamar, se realiza una u otra operacion.</p>
-     * 
-     * @since 1.0
-     * @param a <i>Primer valor, numerador en una operacion de tipo division.</i>
-     * @param b <i>Segundo valor, denominador en una operacion de tipo division</i>
-     * @return <i>Resultado de la operacion.</i>
-     */
 
-    double operar(ExpresionBase a, ExpresionBase b){
-        switch(this){
-            case SUMA:
-                return a.getValor() + b.getValor();
-            case RESTA:
-                return a.getValor() - b.getValor();
-            case MULTIPLICACION:
-                return a.getValor() * b.getValor();
-            default:
-                return a.getValor() / b.getValor();
-        }
-    }
-    
     /**
      * <p>Retorna el tipo de operacion que esta emparejado con el caracter ingresado.</p>
      * 

@@ -85,7 +85,7 @@ public class Calculadora {
             expresion = new Expresion(sentencia,sumaServicio, restaServicio, multiplicacionServicio, divisionServicio);
             return expresion.getValor();
         }
-        throw new ECalculadora();
+        throw new RuntimeException("Sentencia no definida aun");
     }
 
 

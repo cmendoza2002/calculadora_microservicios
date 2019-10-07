@@ -186,23 +186,6 @@ public class Expresion extends ExpresionBase {
     }
     
     /**
-     * <p>Genera una lista espejo de los elementos que estan en la lista de elementos, 
-     * y con ellos hace las operaciones requeridas sin modificar el orden de los 
-     * elementos originales.</p>
-     * 
-     * @since 1.0
-     * @return <i>Copia de la lista de elementos.</i>
-     */
-    
-    private List<ExpresionBase> copiarElementos(){
-        List<ExpresionBase> aux = new ArrayList<>();
-        elementos.stream().forEach((elemento) -> {
-            aux.add(elemento);
-        });
-        return aux;
-    }
-    
-    /**
      * <p>Obtiene el valor de las operaciones en la expresion.</p>
      * 
      * @since 1.0
@@ -210,7 +193,10 @@ public class Expresion extends ExpresionBase {
      */
     @Override
     double getValor() {
-        List<ExpresionBase> aux = copiarElementos();
+        List<ExpresionBase> aux = new ArrayList<>();
+        elementos.stream().forEach((elemento) -> {
+            aux.add(elemento);
+        });
         operadores.stream().forEach((operador) -> {
             if(aux.size()<2)throw new CalculadoraException("Error en la configuracion de las operaciones, favor de revisar.");
             ExpresionBase a = aux.get(0);
@@ -234,9 +220,9 @@ public class Expresion extends ExpresionBase {
     double getValor(Operador operador, ExpresionBase a, ExpresionBase b) {
         switch(operador){
             case SUMA:
-                return sumaServicio.calcular(a.getValor(),b.getValor());//a.getValor() + b.getValor();
+                return sumaServicio.calcular(a.getValor(),b.getValor());
             case RESTA:
-                return restaServicio.calcular(a.getValor(),b.getValor());//a.getValor() - b.getValor();
+                return restaServicio.calcular(a.getValor(),b.getValor());
             case MULTIPLICACION:
                 return multiplicacionServicio.calcular(a.getValor(),b.getValor());//a.getValor() * b.getValor();
             default:

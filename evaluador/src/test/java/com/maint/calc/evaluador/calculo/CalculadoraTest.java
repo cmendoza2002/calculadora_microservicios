@@ -44,7 +44,6 @@ public class CalculadoraTest {
     @Test
     public void getResultado() {
         String expresion =  "2+2";
-        Validador validador = new Validador();
         Calculadora calculadora = new Calculadora(sumaServicio, restaServicio, multiplicacionServicio, divisionServicio);
         double res = calculadora.calcularExpresion(expresion);
         assertEquals(4,res,0.001);

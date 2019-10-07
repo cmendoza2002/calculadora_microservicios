@@ -23,10 +23,6 @@ public class ServicioCalculadoraImpTest {
     @InjectMocks
     private ServicioCalculadoraImp servicioCalculadora;
 
-
-    //@Mock
-    //private SumaClient sumaClient;
-
     @Mock
     private SumaServicio sumaServicio;
 
@@ -44,7 +40,6 @@ public class ServicioCalculadoraImpTest {
     public void setup()
     {
         MockitoAnnotations.initMocks(this);
-      //  when(sumaClient.sumar(any())).thenReturn(4d);
         when(sumaServicio.calcular(2.0,2.0)).thenReturn(4.0);
         when(sumaServicio.calcular(4.0,0)).thenReturn(4.0);
     }
