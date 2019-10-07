@@ -1,1 +1,1 @@
-include 'evaluador','discovery','suma','resta','multiplicacion','division','config-server'
+include 'config-server','discovery','evaluador','suma','resta','multiplicacion','division'

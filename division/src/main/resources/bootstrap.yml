@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: division-service
+  profiles:
+             active: pro
+             cloud:
+               config:
+                 uri: http://localhost:8888
