@@ -92,7 +92,7 @@ public class CalculadoraTest {
 
         assertEquals(10.0,calculadora.calcularExpresion("(10+10+10)/3"),0.00001);
 
-        assertEquals(50.0,calculadora.calcularExpresion("(10*10*10)/20"),0.00001);
+        assertEquals(60.0,calculadora.calcularExpresion("(10*10*10)/20"),0.00001);
 
     }
 }
