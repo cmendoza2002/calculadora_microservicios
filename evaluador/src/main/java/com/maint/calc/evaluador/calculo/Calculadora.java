@@ -41,7 +41,7 @@ public class Calculadora {
     /**
      * Valida las expresiones pasadas como string
      */
-    private Validador validador;
+    private Validador validador= new Validador();
 
     /**
      * <p>Expresion a calcular. Es una clase <i>{@link Expresion}</i>.</p>
@@ -68,7 +68,6 @@ public class Calculadora {
         this.restaServicio = restaServicio;
         this.multiplicacionServicio = multiplicacionServicio;
         this.divisionServicio = divisionServicio;
-        validador = new Validador();
     }
     
     /**
@@ -85,7 +84,7 @@ public class Calculadora {
             expresion = new Expresion(sentencia,sumaServicio, restaServicio, multiplicacionServicio, divisionServicio);
             return expresion.getValor();
         }
-        throw new RuntimeException("Sentencia no definida aun");
+        throw new CalculadoraException("Sentencia no definida aun");
     }
 
 
