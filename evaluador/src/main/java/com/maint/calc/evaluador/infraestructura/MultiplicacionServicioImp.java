@@ -13,6 +13,5 @@ public class MultiplicacionServicioImp implements MultiplicacionServicio {
     @Override
     public double calcular(double a, double b) {
         return client.multiplicar(a,b);
-        //return a*b;
     }
 }

@@ -11,8 +11,6 @@ public class ServicioRestaImp implements RestaServicio {
     private RestaClient client;
     @Override
     public double calcular(double a, double b) {
-
-        //return a-b;
         return client.restar(a,b);
     }
 }

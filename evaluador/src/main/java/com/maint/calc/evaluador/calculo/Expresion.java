@@ -20,10 +20,6 @@ import com.maint.calc.evaluador.calculo.servicios.DivisionServicio;
 import com.maint.calc.evaluador.calculo.servicios.MultiplicacionServicio;
 import com.maint.calc.evaluador.calculo.servicios.RestaServicio;
 import com.maint.calc.evaluador.calculo.servicios.SumaServicio;
-import com.maint.calc.evaluador.servicios.ServicioCalculadora;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
 import java.util.ArrayList;
 import java.util.List;
 

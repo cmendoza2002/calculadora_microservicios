@@ -13,6 +13,5 @@ public class DivisionServicioImp implements DivisionServicio {
     @Override
     public double calcular(double a, double b) {
         return client.dividir(a,b);
-        //return a/b;
     }
 }
