@@ -55,43 +55,17 @@ dependencyManagement {
 }
 
 docker {
+
+    registryCredentials {
+        username = 'developer'
+        password = 'micro.123'
+    }
+
     springBootApplication {
         baseImage = 'openjdk:8-alpine'
-        ports = [9090, 8082]
-        tag = 'maint:suma-micro'
-        jvmArgs = ['-Dspring.profiles.active=production', '-Xmx2048m']
+        ports = [8082, 8082]
+        tag = 'registry.reinventarlarueda.com:8123/suma-service:0.01'
+        jvmArgs = ['-Dspring.profiles.active=pro', '-Xmx2048m']
     }
 }
 
-
-
-/*tasks.create('createDockerfile', Dockerfile) {
-    from('openjdk:jre-alpine')
-    copyFile('suma-0.0.1-SNAPSHOT.jar', '/app/my-app-1.0.jar')
-    entryPoint('java')
-    defaultCommand('-jar', '/app/my-app-1.0.jar')
-    exposePort(8080)
-}*/
-
-/*
-task copyJar(type: Copy) {
-    group = 'Docker'
-    from file("$buildDir/libs/suma-0.0.1-SNAPSHOT.jar")
-    into file("$buildDir/docker")
-}*/
-
-/*task buildImage(type: DockerBuildImage) {
-    //dependsOn createDockerfile, copyJar
-    inputDir = file('build/docker')
-    tags.add('cmendoza/suma:latest')
-}*/
-/*
-task pushImage(type: DockerPushImage) {
-    group = 'Docker'
-    dependsOn buildImage
-    conventionMapping.imageName = { buildImage.getTag() }
-}
-
-String getConfigurationProperty(String envVar, String sysProp) {
-    System.getenv(envVar) ?: project.findProperty(sysProp)
-}*/

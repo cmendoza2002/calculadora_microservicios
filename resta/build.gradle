@@ -2,6 +2,7 @@ plugins {
     id 'org.springframework.boot' version '2.1.8.RELEASE'
     id 'io.spring.dependency-management' version '1.0.8.RELEASE'
     id 'java'
+    id 'com.bmuschko.docker-spring-boot-application' version '5.1.0'
 }
 
 group = 'com.maint.calc'
@@ -41,10 +42,26 @@ dependencies {
     // https://mvnrepository.com/artifact/io.springfox/springfox-swagger2
     compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
 
+
 }
 
 dependencyManagement {
     imports {
         mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
+}
+
+docker {
+
+    registryCredentials {
+        username = 'developer'
+        password = 'micro.123'
+    }
+
+    springBootApplication {
+        baseImage = 'openjdk:8-alpine'
+        ports = [8083, 8083]
+        tag = 'registry.reinventarlarueda.com:8123/resta-service:0.01'
+        jvmArgs = ['-Dspring.profiles.active=pro', '-Xmx2048m']
     }
 }

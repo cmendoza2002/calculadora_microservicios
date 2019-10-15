@@ -4,7 +4,7 @@ spring:
   application:
     name: suma-service
   profiles:
-             active: pro
-             cloud:
-               config:
-                 uri: http://localhost:8888
+    active: pro
+  cloud:
+    config:
+      uri: http://192.168.5.54:8888
