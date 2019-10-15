@@ -24,5 +24,17 @@ pipeline {
                     sh "./gradlew -Dsonar.host.url=http://192.168.7.126:9001 -Dsonar.login=admin  -Dsonar.password=admin sonarqube"
                }
           }
+
+          stage("Docker Build Images") {
+             steps {
+                sh " ./gradlew dockerBuildImage"
+             }
+          }
+
+          stage("Docker Push Images") {
+             steps {
+               sh " ./gradlew dockerPushImage"
+             }
+          }
      }
 }
