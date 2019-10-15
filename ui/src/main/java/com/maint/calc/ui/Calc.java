@@ -1,102 +1,101 @@
 package com.maint.calc.ui;
 
-import com.vaadin.server.VaadinRequest;
+import com.vaadin.annotations.Title;
+import com.vaadin.navigator.View;
+import com.vaadin.navigator.ViewDisplay;
+import com.vaadin.server.*;
+import com.vaadin.shared.ui.ContentMode;
+import com.vaadin.spring.annotation.SpringUI;
+import com.vaadin.spring.annotation.SpringViewDisplay;
 import com.vaadin.ui.*;
-import com.vaadin.ui.Button.ClickEvent;
-import com.vaadin.ui.Button.ClickListener;
+import com.vaadin.ui.themes.ValoTheme;
 
-/**
- * A simple calculator using Vaadin.
- *
- */
-public class Calc extends UI implements ClickListener {
+import java.util.ArrayList;
+import java.util.List;
+import java.util.TimeZone;
 
-    // All variables are automatically stored in the session.
-    private double current = 0.0;
-    private double stored = 0.0;
-    private char lastOperationRequested = 'C';
-
-    // User interface components
-    private final Label display = new Label("0.0");
+@SpringUI
+@Title("Calculadora Microservicios")
+@SpringViewDisplay
+public class Calc extends UI implements ViewDisplay {
 
 
-    // Event handler for button clicks. Called for all the buttons in the
-    // application.
-    public void buttonClick(ClickEvent event) {
-
-        // Get the button that was clicked
-        Button button = event.getButton();
-
-        // Get the requested operation from the button caption
-        char requestedOperation = button.getCaption().charAt(0);
-
-        // Calculate the new value
-        double newValue = calculate(requestedOperation);
-
-        // Update the result label with the new value
-        display.setValue("" + newValue);
-
-    }
-
-    // Calculator "business logic" implemented here to keep the example minimal
-    private double calculate(char requestedOperation) {
-        if ('0' <= requestedOperation && requestedOperation <= '9') {
-            current = current * 10
-                    + Double.parseDouble("" + requestedOperation);
-            return current;
-        }
-        switch (lastOperationRequested) {
-            case '+':
-                stored += current;
-                break;
-            case '-':
-                stored -= current;
-                break;
-            case '/':
-                stored /= current;
-                break;
-            case '*':
-                stored *= current;
-                break;
-            case 'C':
-                stored = current;
-                break;
-        }
-        lastOperationRequested = requestedOperation;
-        current = 0.0;
-        if (requestedOperation == 'C') {
-            stored = 0.0;
-        }
-        return stored;
-    }
+    private CssLayout menu = new CssLayout();
+    private ValoMenuLayout root = new ValoMenuLayout();
+    private CssLayout menuItemsLayout = new CssLayout();
 
     @Override
     protected void init(VaadinRequest request) {
-        // Create the main layout for our application (4 columns, 5 rows)
-        final GridLayout layout = new GridLayout(4, 5);
-
-        /*
-         * Create the main window for the application using the main layout. The
-         * main window is shown when the application is starts.
-         */
-        setContent(new Window("Calculator Application", layout));
-
-        // Create a result label that over all 4 columns in the first row
-        layout.addComponent(display, 0, 0, 3, 0);
-
-        // The operations for the calculator in the order they appear on the
-        // screen (left to right, top to bottom)
-        String[] operations = new String[] { "7", "8", "9", "/", "4", "5", "6",
-                "*", "1", "2", "3", "-", "0", "=", "C", "+" };
-
-        for (String caption : operations) {
-
-            // Create a button and use this application for event handling
-            Button button = new Button(caption);
-            button.addClickListener(this);
-
-            // Add the button to our main layout
-            layout.addComponent(button);
-        }
+        TimeZone.setDefault(TimeZone.getTimeZone("America/Bogota"));
+        Responsive.makeResponsive(this);
+        getNavigator().addView("", DefaultView.class);
+        root.setWidth("100%");
+        root.addMenu(buildMenu());
+        Notification.show("Hola","Bienvenido(a) ", Notification.Type.TRAY_NOTIFICATION);
+        getNavigator().navigateTo(DefaultView.VIEW_NAME);
+        setContent(root);
     }
+
+    private CssLayout buildMenu() {
+        final HorizontalLayout top = new HorizontalLayout();
+        top.setWidth("100%");
+        top.setDefaultComponentAlignment(Alignment.MIDDLE_LEFT);
+        top.addStyleName("valo-menu-title");
+        menu.addComponent(top);
+        //menu.addComponent(createThemeSelect());
+        final Button showMenu = new Button("Menu", new Button.ClickListener() {
+            @Override
+            public void buttonClick(final Button.ClickEvent event) {
+                if (menu.getStyleName().contains("valo-menu-visible")) {
+                    menu.removeStyleName("valo-menu-visible");
+                } else {
+                    menu.addStyleName("valo-menu-visible");
+                }
+            }
+        });
+        showMenu.addStyleName(ValoTheme.BUTTON_PRIMARY);
+        showMenu.addStyleName(ValoTheme.BUTTON_SMALL);
+        showMenu.addStyleName("valo-menu-toggle");
+        showMenu.setIcon(FontAwesome.LIST);
+        menu.addComponent(showMenu);
+        final Label title = new Label(
+                "<h3><strong>Calculadora </strong></h3>", ContentMode.HTML);
+        title.setSizeUndefined();
+        top.addComponent(title);
+        top.setExpandRatio(title, 1);
+        final MenuBar settings = new MenuBar();
+        settings.addStyleName("user-menu");
+
+        menu.addComponent(settings);
+        menuItemsLayout.setPrimaryStyleName("valo-menuitems");
+        menu.addComponent(menuItemsLayout);
+
+        for (OptionMenu item :getOptionsMenu()) {
+            final Button b = new Button(item.getNombre(), (Button.ClickListener) event -> {
+                String key = item.getId();
+                getNavigator().navigateTo(key);
+            });
+            b.setHtmlContentAllowed(true);
+            b.setPrimaryStyleName("valo-menu-item");
+            b.setIcon(item.getIcon());
+            menuItemsLayout.addComponent(b);
+        }
+        return menu;
+    }
+
+    @Override
+    public void showView(View view) {
+        root.getContentContainer().removeAllComponents();
+        root.getContentContainer().addComponent((Component) view);
+    }
+
+
+    private List<OptionMenu> getOptionsMenu()
+    {
+        OptionMenu optionCalc = new OptionMenu(FontAwesome.CALCULATOR, CalculadoraView.VIEW_NAME,"Basica");
+        ArrayList<OptionMenu> menus = new ArrayList<>();
+        menus.add(optionCalc);
+        return new ArrayList<>(menus);
+    }
+
 }
