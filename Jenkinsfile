@@ -34,7 +34,13 @@ pipeline {
           stage("Docker Push Images") {
              steps {
                sh "cat password_registry.txt | docker login --username developer --password-stdin registry.reinventarlarueda.com:8123"
-               sh " ./gradlew dockerPushImage"
+               sh "docker push registry.reinventarlarueda.com:8123/discovery:0.01"
+               sh "docker push registry.reinventarlarueda.com:8123/suma-service:0.01"
+               sh "docjer push registry.reinventarlarueda.com:8123/resta-service:0.01"
+               sh "docker push registry.reinventarlarueda.com:8123/mult-service:0.01"
+               sh "docker push registry.reinventarlarueda.com:8123/gateway:0.01"
+               sh "docker push registry.reinventarlarueda.com:8123/evluador:0.01"
+               sh "docker push registry.reinventarlarueda.com:8123/config-server:0.01 "
              }
           }
      }
