@@ -33,6 +33,7 @@ pipeline {
 
           stage("Docker Push Images") {
              steps {
+               sh "cat password_registry.txt | docker login --username developer --password-stdin registry.reinventarlarueda.com:8123"
                sh " ./gradlew dockerPushImage"
              }
           }
