@@ -16,7 +16,7 @@ eureka:
 zuul:
   routes:
     EVALUADOR-SERVICE:
-      path: /calculadora/**
+      path: /**
 spring:
   application:
     name: gateway

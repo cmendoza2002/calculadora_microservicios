@@ -3,10 +3,7 @@ package com.maint.calc.ui;
 import com.maint.calc.ui.servicios.EvaluadorService;
 import com.vaadin.navigator.View;
 import com.vaadin.spring.annotation.SpringView;
-import com.vaadin.ui.Button;
-import com.vaadin.ui.GridLayout;
-import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.ui.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.annotation.PostConstruct;
@@ -32,26 +29,35 @@ public class CalculadoraView extends VerticalLayout implements View {
 
     }
     private double calculate(char requestedOperation) {
-        if ('0' <= requestedOperation && requestedOperation <= '9') {
-            current = current * 10
-                    + Double.parseDouble("" + requestedOperation);
-            return current;
+        try
+        {
+            if ('0' <= requestedOperation && requestedOperation <= '9') {
+                current = current * 10
+                        + Double.parseDouble("" + requestedOperation);
+                return current;
+            }
+            switch (lastOperationRequested) {
+                case 'C':
+                    stored = current;
+                    break;
+                default:
+                    double op = client.procesar("" + stored + lastOperationRequested + current);
+                    stored = op;
+                    break;
+            }
+            lastOperationRequested = requestedOperation;
+            current = 0.0;
+            if (requestedOperation == 'C') {
+                stored = 0.0;
+            }
+            return stored;
         }
-        switch (lastOperationRequested) {
-            case 'C':
-                stored = current;
-                break;
-            default:
-                double op = client.procesar("" + stored + "+" + current);
-                stored = op;
-                break;
+        catch (Exception e)
+        {
+            Notification.show("No se puede");
+            return  stored;
         }
-        lastOperationRequested = requestedOperation;
-        current = 0.0;
-        if (requestedOperation == 'C') {
-            stored = 0.0;
-        }
-        return stored;
+
     }
 
 
