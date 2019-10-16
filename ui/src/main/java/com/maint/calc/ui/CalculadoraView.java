@@ -1,11 +1,13 @@
 package com.maint.calc.ui;
 
+import com.maint.calc.ui.servicios.EvaluadorService;
 import com.vaadin.navigator.View;
 import com.vaadin.spring.annotation.SpringView;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.GridLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.VerticalLayout;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.annotation.PostConstruct;
 
@@ -15,6 +17,10 @@ public class CalculadoraView extends VerticalLayout implements View {
     private double current = 0.0;
     private double stored = 0.0;
     private char lastOperationRequested = 'C';
+
+
+    @Autowired
+    EvaluadorService client;
 
     private final Label display = new Label("0.0");
     public void buttonClick(Button.ClickEvent event) {
@@ -32,20 +38,12 @@ public class CalculadoraView extends VerticalLayout implements View {
             return current;
         }
         switch (lastOperationRequested) {
-            case '+':
-                stored += current;
-                break;
-            case '-':
-                stored -= current;
-                break;
-            case '/':
-                stored /= current;
-                break;
-            case '*':
-                stored *= current;
-                break;
             case 'C':
                 stored = current;
+                break;
+            default:
+                double op = client.procesar("" + stored + "+" + current);
+                stored = op;
                 break;
         }
         lastOperationRequested = requestedOperation;

@@ -29,6 +29,7 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     compile 'com.vaadin:vaadin-server:8.9.1'
+    compile("com.fasterxml.jackson.core:jackson-databind")
 
 }
 
