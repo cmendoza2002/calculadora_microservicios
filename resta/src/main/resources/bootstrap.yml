@@ -5,11 +5,11 @@ spring:
     name: resta-service
   profiles:
     active: pro
-      cloud:
-        config:
-          discovery:
-            enabled: true
-            service-id: config-server
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-serv    er
 eureka:
   instance:
     status-page-url-path: /swagger-ui.html
