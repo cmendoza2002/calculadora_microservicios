@@ -1,0 +1,75 @@
+---
+- hosts: server
+  vars:
+    #ansible_python_interpreter: /usr/lib/python2.7
+    ansible_become_pass: micro.123
+  become: yes
+  become_method: sudo
+  tasks:
+    - name: Install aptitude using apt
+      apt: name=aptitude state=latest update_cache=yes force_apt_get=yes
+    - name: Install base packages
+      apt: name={{ item }} state=installed
+      with_items:
+        - python-minimal
+        - python-pip
+    - name: Install dependent python modules
+      pip:
+        name: "{{item}}"
+        state: present
+      with_items:
+        - docker-py==1.10.6
+        - docker-compose==1.9.0
+    - name: Log into private registry and force re-authorization
+      docker_login:
+          registry: registry.reinventarlarueda.com:8123
+          username: developer
+          password: aurora.123
+          email: cmendoza2002@gmail.com
+          reauthorize: yes
+    - name: Run Discovery Container
+      docker_container:
+          name: calc-discovery
+          image: registry.reinventarlarueda.com:8123/discovery:0.01
+          recreate: yes
+          state: started
+    - name: Run Gateway Container
+      docker_container:
+          name: calc-gateway
+          image: registry.reinventarlarueda.com:8123/gateway:0.01
+          recreate: yes
+          state: started
+          ports:
+            - "9090:9090"
+    - name: Run Suma Container
+      docker_container:
+          name: calc-suma
+          image: registry.reinventarlarueda.com:8123/suma-service:0.01
+          recreate: yes
+          state: started
+          env:
+            EUREKA_URL: "http://calc-discovery:8762/eureka/"
+    - name: Run Resta Container
+      docker_container:
+          name: calc-resta
+          image: registry.reinventarlarueda.com:8123/resta-service:0.01
+          recreate: yes
+          state: started
+    - name: Run Multi Container
+      docker_container:
+          name: calc-mult
+          image: registry.reinventarlarueda.com:8123/mult-service:0.01
+          recreate: yes
+          state: started
+    - name: Run Evaluador Container
+      docker_container:
+          name: calc-eval
+          image: registry.reinventarlarueda.com:8123/evluador:0.01
+          recreate: yes
+          state: started
+    - name: Run Config-Server Container
+      docker_container:
+          name: calc-config-server
+          image: registry.reinventarlarueda.com:8123/config-server:0.01
+          recreate: yes
+          state: started

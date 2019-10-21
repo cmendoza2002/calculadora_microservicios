@@ -7,4 +7,12 @@ spring:
     active: pro
   cloud:
     config:
-      uri: http://192.168.5.54:8888
+      discovery:
+        enabled: true
+        service-id: config-server
+eureka:
+  instance:
+    status-page-url-path: /swagger-ui.html
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka/}

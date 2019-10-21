@@ -5,7 +5,15 @@ spring:
   application:
     name: evaluador-service
   profiles:
-             active: pro
-             cloud:
-               config:
-                 uri: http://localhost:8888
+    active: pro
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server
+eureka:
+  instance:
+    status-page-url-path: /swagger-ui.html
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka/}

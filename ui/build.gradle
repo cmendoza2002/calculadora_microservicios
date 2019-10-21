@@ -2,6 +2,7 @@ plugins {
     id 'org.springframework.boot' version '2.1.9.RELEASE'
     id 'io.spring.dependency-management' version '1.0.8.RELEASE'
     id 'java'
+    id 'com.bmuschko.docker-spring-boot-application' version '5.1.0'
 }
 
 group = 'com.maint.calc'
@@ -23,6 +24,7 @@ ext {
 }
 
 dependencies {
+
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'com.vaadin:vaadin-spring-boot-starter'
     compileOnly 'org.projectlombok:lombok'
@@ -36,5 +38,20 @@ dependencies {
 dependencyManagement {
     imports {
         mavenBom "com.vaadin:vaadin-bom:${vaadinVersion}"
+    }
+}
+
+docker {
+
+    registryCredentials {
+        username = 'developer'
+        password = 'micro.123'
+    }
+
+    springBootApplication {
+        baseImage = 'openjdk:8-alpine'
+        ports = [8086]
+        tag = 'registry.reinventarlarueda.com:8123/suma-ui:0.01'
+        jvmArgs = ['-Dspring.profiles.active=pro', '-Xmx2048m']
     }
 }

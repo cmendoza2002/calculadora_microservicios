@@ -1,0 +1,2 @@
+[server]
+192.168.7.130 ansible_user=micro ansible_ssh_pass=micro.123
