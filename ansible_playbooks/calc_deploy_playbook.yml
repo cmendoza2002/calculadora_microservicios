@@ -33,6 +33,8 @@
           image: registry.reinventarlarueda.com:8123/discovery:0.01
           recreate: yes
           state: started
+          ports:
+            - "8761:8761"
     - name: Run Gateway Container
       docker_container:
           name: calc-gateway
@@ -48,28 +50,36 @@
           recreate: yes
           state: started
           env:
-            EUREKA_URL: "http://calc-discovery:8762/eureka/"
+            EUREKA_URL: "http://calc-discovery:8761/eureka/"
     - name: Run Resta Container
       docker_container:
           name: calc-resta
           image: registry.reinventarlarueda.com:8123/resta-service:0.01
           recreate: yes
           state: started
+          env:
+            EUREKA_URL: "http://calc-discovery:8761/eureka/"
     - name: Run Multi Container
       docker_container:
           name: calc-mult
           image: registry.reinventarlarueda.com:8123/mult-service:0.01
           recreate: yes
           state: started
+          env:
+            EUREKA_URL: "http://calc-discovery:8761/eureka/"
     - name: Run Evaluador Container
       docker_container:
           name: calc-eval
           image: registry.reinventarlarueda.com:8123/evluador:0.01
           recreate: yes
           state: started
+          env:
+            EUREKA_URL: "http://calc-discovery:8761/eureka/"
     - name: Run Config-Server Container
       docker_container:
           name: calc-config-server
           image: registry.reinventarlarueda.com:8123/config-server:0.01
           recreate: yes
           state: started
+          env:
+            EUREKA_URL: "http://calc-discovery:8761/eureka/"
