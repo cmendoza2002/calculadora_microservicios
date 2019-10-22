@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\clozano\\source\\repos\\Microservicios\\CalculadoraMicroFox\\CalculadoraMicroFox.csproj": {}
+    "C:\\Users\\clozano\\IdeaProjects\\calculadora_microservicios\\XamarinApplication\\CalculadoraMicroFox\\CalculadoraMicroFox.csproj": {}
   },
   "projects": {
-    "C:\\Users\\clozano\\source\\repos\\Microservicios\\CalculadoraMicroFox\\CalculadoraMicroFox.csproj": {
+    "C:\\Users\\clozano\\IdeaProjects\\calculadora_microservicios\\XamarinApplication\\CalculadoraMicroFox\\CalculadoraMicroFox.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\clozano\\source\\repos\\Microservicios\\CalculadoraMicroFox\\CalculadoraMicroFox.csproj",
+        "projectUniqueName": "C:\\Users\\clozano\\IdeaProjects\\calculadora_microservicios\\XamarinApplication\\CalculadoraMicroFox\\CalculadoraMicroFox.csproj",
         "projectName": "CalculadoraMicroFox",
-        "projectPath": "C:\\Users\\clozano\\source\\repos\\Microservicios\\CalculadoraMicroFox\\CalculadoraMicroFox.csproj",
+        "projectPath": "C:\\Users\\clozano\\IdeaProjects\\calculadora_microservicios\\XamarinApplication\\CalculadoraMicroFox\\CalculadoraMicroFox.csproj",
         "packagesPath": "C:\\Users\\clozano\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\clozano\\source\\repos\\Microservicios\\CalculadoraMicroFox\\obj\\",
+        "outputPath": "C:\\Users\\clozano\\IdeaProjects\\calculadora_microservicios\\XamarinApplication\\CalculadoraMicroFox\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [

@@ -1,4 +1,4 @@
-package com.maint.calc.ui;
+package com.maint.calc.ui.views;
 
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener;

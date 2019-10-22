@@ -1,4 +1,4 @@
-package com.maint.calc.ui;
+package com.maint.calc.ui.views;
 
 import com.maint.calc.ui.servicios.EvaluadorService;
 import com.vaadin.navigator.View;

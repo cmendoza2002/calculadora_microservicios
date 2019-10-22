@@ -1,5 +1,7 @@
 package com.maint.calc.ui;
 
+import com.maint.calc.ui.views.CalculadoraView;
+import com.maint.calc.ui.views.DefaultView;
 import com.vaadin.annotations.Title;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewDisplay;

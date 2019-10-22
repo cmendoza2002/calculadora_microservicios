@@ -14,7 +14,7 @@ namespace CalculadoraMicroFox
     public class MainActivity : Activity
     {
 
-        private const string URL = "http://192.168.43.148:9090/calculadora/v1/evaluador/procesar";
+        private const string URL = "http://192.168.7.130:9090/calculadora/v1/evaluador/procesar";
         private readonly HttpClient client = new HttpClient();
 
 
@@ -81,16 +81,16 @@ namespace CalculadoraMicroFox
             switch (@operator)
             {
                 case "÷":
-                    result = operar(first.Value, second.Value, "/");//first / second;
+                    result = operar("" + first.Value + "/" + second.Value);//first / second;
                     break;
                 case "×":
-                    result = operar(first.Value, second.Value, "*");//first * second;
+                    result = operar("" + first.Value + "*" + second.Value);//first * second;
                     break;
                 case "+":
-                    result = operar(first.Value, second.Value, "+");//first + second;
+                    result = operar("" + first.Value + "+" + second.Value);//first + second;
                     break;
                 case "-":
-                    result = operar(first.Value, second.Value, "-");//first - second;
+                    result = operar("" + first.Value + "-" + second.Value);//first - second;
                     break;
             }
 
@@ -113,9 +113,9 @@ namespace CalculadoraMicroFox
         private void UpdateCalculatorText() => calculatorText.Text = $"{numbers[0]} {@operator} {numbers[1]}";
 
 
-        private double operar(double a, double b, string operador)
+        private double operar(string operacion)
         {
-            EvaluadorRequest request = new EvaluadorRequest("" + a + operador + b);
+            EvaluadorRequest request = new EvaluadorRequest(operacion);
             string content = JsonConvert.SerializeObject(request);
             Task<HttpResponseMessage> result = client.PostAsync(URL, new StringContent(content, Encoding.UTF8, "application/json"));
             //Task<string> rr = result.Result.Content;
