@@ -54,7 +54,7 @@ public class CalculadoraView extends VerticalLayout implements View {
         }
         catch (Exception e)
         {
-            Notification.show("No se puede");
+            Notification.show("No se pudo completar la operacion");
             return  stored;
         }
 
