@@ -107,3 +107,12 @@
             EUREKA_URL: "http://calc-discovery:8761/eureka/"
           networks:
             - name: calc-network
+    - name: Run UI Container
+        docker_container:
+          name: calc-ui
+          image: registry.reinventarlarueda.com:8123/suma-ui:0.01
+          pull: yes
+          recreate: yes
+          state: started
+          ports:
+            - "8086:8086"
