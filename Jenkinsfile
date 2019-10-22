@@ -41,7 +41,7 @@ pipeline {
                sh "docker push registry.reinventarlarueda.com:8123/gateway:0.01"
                sh "docker push registry.reinventarlarueda.com:8123/evluador:0.01"
                sh "docker push registry.reinventarlarueda.com:8123/config-server:0.01 "
-               sh "docker push registry.reinventarlarueda.com:8123/config-server:0.01 "
+               sh "docker push registry.reinventarlarueda.com:8123/suma-ui:0.01"
              }
           }
      }
