@@ -43,6 +43,8 @@
           state: started
           ports:
             - "9090:9090"
+          env:
+            EUREKA_URL: "http://calc-discovery:8761/eureka/"
     - name: Run Suma Container
       docker_container:
           name: calc-suma

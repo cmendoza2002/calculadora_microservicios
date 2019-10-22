@@ -37,7 +37,7 @@ docker {
     }
 
     springBootApplication {
-        baseImage = 'openjdk:8-alpine'
+        baseImage = 'openjdk:8'
         ports = [8888]
         tag = 'registry.reinventarlarueda.com:8123/config-server:0.01'
         jvmArgs = ['-Dspring.profiles.active=pro', '-Xmx2048m']
