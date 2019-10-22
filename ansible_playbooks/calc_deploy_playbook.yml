@@ -27,6 +27,9 @@
           password: aurora.123
           email: cmendoza2002@gmail.com
           reauthorize: yes
+    - name: Create a network
+      docker_network:
+          name: calc-network
     - name: Run Discovery Container
       docker_container:
           name: calc-discovery
@@ -35,6 +38,8 @@
           state: started
           ports:
             - "8761:8761"
+          networks:
+            - name: calc-network
     - name: Run Gateway Container
       docker_container:
           name: calc-gateway
@@ -45,43 +50,60 @@
             - "9090:9090"
           env:
             EUREKA_URL: "http://calc-discovery:8761/eureka/"
+          networks:
+            - name: calc-network
     - name: Run Suma Container
       docker_container:
           name: calc-suma
           image: registry.reinventarlarueda.com:8123/suma-service:0.01
+          pull: yes
           recreate: yes
           state: started
           env:
             EUREKA_URL: "http://calc-discovery:8761/eureka/"
+          networks:
+            - name: calc-network
     - name: Run Resta Container
       docker_container:
           name: calc-resta
           image: registry.reinventarlarueda.com:8123/resta-service:0.01
+          pull: yes
           recreate: yes
           state: started
           env:
             EUREKA_URL: "http://calc-discovery:8761/eureka/"
+          networks:
+            - name: calc-network
     - name: Run Multi Container
       docker_container:
           name: calc-mult
           image: registry.reinventarlarueda.com:8123/mult-service:0.01
           recreate: yes
+          pull: yes
           state: started
           env:
             EUREKA_URL: "http://calc-discovery:8761/eureka/"
+          networks:
+            - name: calc-network
     - name: Run Evaluador Container
       docker_container:
           name: calc-eval
           image: registry.reinventarlarueda.com:8123/evluador:0.01
+          pull: yes
           recreate: yes
           state: started
           env:
             EUREKA_URL: "http://calc-discovery:8761/eureka/"
+          networks:
+            - name: calc-network
     - name: Run Config-Server Container
       docker_container:
           name: calc-config-server
           image: registry.reinventarlarueda.com:8123/config-server:0.01
+          pull: yes
           recreate: yes
           state: started
           env:
             EUREKA_URL: "http://calc-discovery:8761/eureka/"
+          networks:
+            - name: calc-network
