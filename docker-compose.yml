@@ -1,0 +1,118 @@
+services:
+  discovery:
+    build: ./discovery
+    ports:
+      - "8761:8761"
+    environment:
+      - SPRING_PROFILES_ACTIVE=pro
+    networks:
+      - calc-net
+
+  config-server:
+    build: ./config-server
+    ports:
+      - "8888:8888"
+    environment:
+      - EUREKA_URL=http://discovery:8761/eureka/
+      - SPRING_PROFILES_ACTIVE=pro
+    depends_on:
+      - discovery
+    networks:
+      - calc-net
+
+  gateway:
+    build: ./gateway
+    ports:
+      - "9090:9090"
+    environment:
+      - EUREKA_URL=http://discovery:8761/eureka/
+      - SPRING_PROFILES_ACTIVE=pro
+    depends_on:
+      - discovery
+      - config-server
+    networks:
+      - calc-net
+
+  suma:
+    build: ./suma
+    ports:
+      - "8082:8082"
+    environment:
+      - EUREKA_URL=http://discovery:8761/eureka/
+      - SPRING_PROFILES_ACTIVE=pro
+    depends_on:
+      - discovery
+      - config-server
+    networks:
+      - calc-net
+
+  resta:
+    build: ./resta
+    ports:
+      - "8083:8083"
+    environment:
+      - EUREKA_URL=http://discovery:8761/eureka/
+      - SPRING_PROFILES_ACTIVE=pro
+    depends_on:
+      - discovery
+      - config-server
+    networks:
+      - calc-net
+
+  multiplicacion:
+    build: ./multiplicacion
+    ports:
+      - "8084:8084"
+    environment:
+      - EUREKA_URL=http://discovery:8761/eureka/
+      - SPRING_PROFILES_ACTIVE=pro
+    depends_on:
+      - discovery
+      - config-server
+    networks:
+      - calc-net
+
+  division:
+    build: ./division
+    ports:
+      - "8085:8085"
+    environment:
+      - EUREKA_URL=http://discovery:8761/eureka/
+      - SPRING_PROFILES_ACTIVE=pro
+    depends_on:
+      - discovery
+      - config-server
+    networks:
+      - calc-net
+
+  evaluador:
+    build: ./evaluador
+    ports:
+      - "8087:8085"
+    environment:
+      - EUREKA_URL=http://discovery:8761/eureka/
+      - SPRING_PROFILES_ACTIVE=pro
+    depends_on:
+      - discovery
+      - config-server
+    networks:
+      - calc-net
+
+  ui:
+    build: ./ui
+    ports:
+      - "8086:8086"
+    environment:
+      - EUREKA_URL=http://discovery:8761/eureka/
+      - SPRING_PROFILES_ACTIVE=pro
+      - GATEWAY_URL=gateway:9090
+    depends_on:
+      - discovery
+      - config-server
+      - gateway
+    networks:
+      - calc-net
+
+networks:
+  calc-net:
+    driver: bridge
